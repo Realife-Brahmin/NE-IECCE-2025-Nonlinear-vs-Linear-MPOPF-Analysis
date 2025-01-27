@@ -1,0 +1,122 @@
+\documentclass[conference]{IEEEtran} % default
+
+\usepackage{cite} % default
+
+\usepackage{amsmath,amssymb,amsfonts} % default
+
+\usepackage{hyperref} % for hyperlinks obviously
+\usepackage{cleveref}
+% The following formats are used so that when I call \cref{label_1} or \cref{label_1,label_2} or \crefrange{label_1}{label_4}: 
+    % 1. I never get eq. or eqs. before my bracketed numbers.
+    % 2. The numbers are bracketed.
+
+% For single equation references
+\crefformat{equation}{(#2#1#3)}
+\Crefformat{equation}{(#2#1#3)}
+% For multiple equation references
+\crefmultiformat{equation}
+{(#2#1#3)} % First reference
+{ and (#2#1#3)} % Middle references
+{ and (#2#1#3)} % Last reference
+{ and (#2#1#3)} % Last reference
+% For a range of equation references (e.g., (1)-(3))
+\crefrangeformat{equation}{(#3#1#4) to (#5#2#6)}
+
+\usepackage{algorithmic} % default
+\usepackage{graphicx} % default
+
+\usepackage{float} % to use H
+
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+\usepackage{subfiles} % for invoking figures from within a section vs by running the main file
+
+% \usepackage{hyperref} % for hyperlinks obviously
+
+\usepackage{subcaption} % for caption of figures with multiple plots
+
+% \usepackage{lipsum} 
+\usepackage{textcomp} % default
+\usepackage{xcolor} % default
+
+\usepackage{ulem} % for strikethrough-ing text
+
+\title{Spatially Distributed Multi-Period Optimal Power Flow with Battery Energy Storage Systems}
+
+% Redefine the IEEEauthorrefmark command for using numbers as superscripts
+\makeatletter
+\newcommand{\mysup}[1]{\@fnsymbol{#1}}
+\makeatother
+
+% \author{Nathan Gray,~\IEEEmembership{Student Member~IEEE,}
+%         Subho Paul,~\IEEEmembership{Member~IEEE,}
+%         Anamika Dubey,~\IEEEmembership{Senior Member~IEEE,} \\
+%         Anjan Bose,~\IEEEmembership{Fellow~IEEE,}
+%         Md. Touhiduzzaman,~\IEEEmembership{Member~IEEE,}
+% 	  and James Ogle,~\IEEEmembership{Member~IEEE} 
+%     \thanks{The authors acknowledge support from the U.S. Department of Energy under Contract DE-AC05-76RL01830
+    
+%  N. Gray, A. Dubey, and A. Bose are with the  School of Electrical Engineering and Computer Science, Washington State University, Pullman, WA, USA. S. Paul is with the Department of Electrical Engineering, Indian Institute of Technology (BHU), Varanasi, UP, India. Md. Touhiduzzaman and J. Ogle are with the Energy and Environment Directorate, Pacific Northwest National Laboratory (PNNL), Richland, WA, USA. Email: (nathan.gray, anamika.dubey, bose)@wsu.edu, subho.eee@iitbhu.ac.in, (md.touhiduzzaman, james.ogle)@pnnl.gov
+%  }
+%  }
+
+
+\author{
+    \IEEEauthorblockN{
+        Aryan Ritwajeet Jha\mysup{1}, \textit{SIEEE},
+        Subho Paul\mysup{2}, \textit{MIEEE},
+        and Anamika Dubey\mysup{1}, \textit{SMIEEE}
+        }
+\IEEEauthorblockA{\IEEEauthorrefmark{1}\textit{School of Electrical Engineering \& Computer Science},
+\textit{Washington State University},
+Pullman, WA, USA\\
+\IEEEauthorrefmark{2}\textit{Department of Electrical Engineering},
+\textit{Indian Institute of Technology (BHU) Varanasi},
+Varanasi, UP, India\\
+\IEEEauthorrefmark{1}\{aryan.jha, anamika.dubey\}@wsu.edu, 
+\IEEEauthorrefmark{2}\{subho.eee\}@itbhu.ac.in}
+
+\thanks{%This work is supported  by the U.S. Department offfffff
+%Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Solar Energy Technologies Office Award Number DE-EE-0008774 (awarded to Sukumar Kamalasadan).
+ Authors ack}\vspace{-7mm}}
+
+% \thanks{This work is supported  by the U.S. Department of
+% Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Solar Energy Technologies Office Award Number DE-EE-0008774 (awarded to Sukumar Kamalasadan).
+% S. Paul is with the  School of Electrical Engineering and Computer Science, Washington State University, Pullman, Washington 99163, USA (e-mail: subho.paul@wsu.edu). K. Murari is with the Electrical Engineering and Computer Science Department, University of Toledo, Toledo, Ohio 43606, USA (e-mail: krishna.murari@utoledo.edu).
+% }
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+
+The growing presence of battery-based distributed energy resources (DERs) in power distribution systems necessitates the development of multi-period optimal power flow (MPOPF) algorithms. Generally, an MPOPF problem is formulated as a mixed integer non-convex programming (MINCP) problem and solved in centralized manner. The centralized solutions for MPOPF problem, termed as MPCOPF, suffer from scalability challenges. A typical solution time for a medium-sized ($\sim$100 bus system) is in the order of \(10^3\) to \(10^4\) seconds; such solution time-scales are too slow for operational decision-making. This paper introduces a spatially distributed algorithm to solve MPOPF problems, termed MPDOPF, designed to address these shortcomings. Our method breaks down the centralized MPOPF problem into smaller sub-problems, which are solved in parallel. We achieve network-level optimality using the Equivalent Network Approximation (ENApp) algorithm, where neighboring agents iteratively exchange boundary voltage and power flow variables until convergence. We analyze the performance of the proposed MPDOPF algorithm using the IEEE 123 bus test system, providing insights into the advantages of distributed MPOPF frameworks in terms of solution time compared to centralized approaches.
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Battery energy storage systems, distribution system, optimal power flow, distributed energy resources.
+\end{IEEEkeywords}
+
+\import{../sections/intro/}{intro.tex}
+
+\subfile{../sections/theory/theory.tex}
+% \import{../sections/theory/}{theory.tex}
+
+\import{../sections/simulation/}{simulation.tex}
+
+% \import{../sections/results/}{results.tex}
+\subfile{../sections/results/results.tex}
+% \import{../sections/conclusion/}{conclusion.tex}
+
+\subfile{../sections/conclusion/conclusion.tex}
+
+% \cite{bfm01,Nazir2018Jun,Nazir2019Jun,ddp_sugar_01,Qian2014Jul}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibFile}
+
+\end{document}

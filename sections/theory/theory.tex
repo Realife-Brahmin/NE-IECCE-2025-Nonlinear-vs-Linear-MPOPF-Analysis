@@ -1,0 +1,199 @@
+% \documentclass{article}
+\documentclass[../../outputs/main.tex]{subfiles}
+
+\usepackage{cite} % default
+
+\usepackage{amsmath,amssymb,amsfonts} % default
+\usepackage{cleveref}
+% The following formats are used so that when I call \cref{label_1} or \cref{label_1,label_2} or \crefrange{label_1}{label_4}: 
+    % 1. I never get eq. or eqs. before my bracketed numbers.
+    % 2. The numbers are bracketed.
+
+% For single equation references
+\crefformat{equation}{(#2#1#3)}
+\Crefformat{equation}{(#2#1#3)}
+% For multiple equation references
+\crefmultiformat{equation}
+{(#2#1#3)} % First reference
+{ and (#2#1#3)} % Middle references
+{ and (#2#1#3)} % Last reference
+{ and (#2#1#3)} % Last reference
+% For a range of equation references (e.g., (1)-(3))
+\crefrangeformat{equation}{(#3#1#4) to (#5#2#6)}
+
+
+\usepackage{algorithmic} % default
+\usepackage{graphicx} % default
+
+% \usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+
+% \usepackage{lipsum} 
+\usepackage{textcomp} % default
+\usepackage{xcolor} % default
+% Any packages or configurations specific to this section
+\usepackage{lipsum}
+
+\begin{document}
+
+\section{Problem Formulation}
+
+\subsection{Notations}
+In this study, the distribution system is modeled as a tree (connected graph) with $N$ number of buses (indexed with \(i\), \(j\), and \(k\)); the study is conducted for $T$ time steps (indexed by $t$), each of interval length $\Delta t$. The sets of buses with DERs and batteries are $D$ and $B$ respectively, such that $D, B \subseteq N$.
+A directed edge from bus $i$ to $j$ in the tree is represented by $ij$ and the set for edges is given by $\mathcal{L}$. Line resistance and reactance are \(r_{ij}\) and \(x_{ij}\), respectively. Magnitude of the current flowing through the line at time \(t\) is denoted by \(I_{ij}^t\) and  $l_{ij}^t=\left(I_{ij}^t\right)^2$. The voltage magnitude of bus \(j\) at time \(t\) is given by \(V_j^t\) and  $v_j^t=\left(V_j^t\right)^2$. Apparent power demand at a node \(j\) at time \(t\) is \(s^t_{L_j}\) (\(=p^t_{L_j}+\textit{j}q^t_{L_j}\)). The active power generation from the DER present at bus \(j\) at time \(t\) is denoted by \(p^t_{D_j}\) and controlled reactive power dispatch from the DER inverter is \(q^t_{D_j}\). DER inverter capacity is $S_{D_{R_j}}$.
+% Static capacitance attached to a node $j$ is denoted by $q_{C_j}$. 
+The apparent power flow through line {\(ij\)} at time \(t\) is \(S_{ij}^t\) (\(=P_{ij}^t+\textit{j}Q_{ij}^t\)). The real power flowing from the substation into the network is denoted by $P^t_{Subs}$ and the associated cost involved per kWh is $C^t$. The battery energy level is \(B_j^t\). Charging and discharging active power from battery inverter (of apparent power capacity $S_{B_{R_j}}$) are denoted by \(P_{c_j}^t\) and \(P_{d_j}^t\), respectively and their associated efficiencies are $\eta_c$ and $\eta_d$, respectively. The energy capacity of the batteries is denoted by $B_{R_j}$, and the rated battery power is $P_{B_{R_j}}$. $soc_{min}$ and $soc_{max}$ are fractional values for denoting safe soc limits of a battery about its rated state-of-charge (soc) capacity. The reactive power support of the battery inverter is indicated by \(q_{B_j}^t\). 
+% Rated apparent powers of DERs and Batteries at node $j$ are denoted by $S_{D_{R_j}}$ and $S_{B_{R_j}}$ respectively.
+
+\subsection{MPCOPF with Batteries}
+The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_withSCD}. The first term in \cref{eq:genCost_withSCD} aims to minimize the total energy cost for the entire horizon. Including the `Battery Loss' cost as the second term ($\alpha > 0$) helps eliminate the need for binary (integer) variables typically used to prevent simultaneous charging and discharging. The resulting OPF problem is a non-convex optimization problem \cite{Nazir2021Sep}.
+
+% \begin{equation}
+%     \min {\sum_{t = 1}^{T} \left[ C^t P^t_{Subs} + \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j}\right\} \right] } \label{eq:genCost_withSCD}
+% \end{equation}
+\begin{equation}
+    \begin{split}
+        \min \sum_{t = 1}^{T} \left[ C^t P^t_{Subs} \Delta t+ \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} \right. \right. \\
+        \left. \left. + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\} \right]
+    \end{split}
+    \label{eq:genCost_withSCD}
+\end{equation}
+
+
+Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere-and-lim_Bj} as given below:
+
+\begin{align}
+    % {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
+    % - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} \nonumber &\ {} \\[-0.50em]
+    % {\hspace{2em} - \left(P_{d_j}^t - P_{c_j}^t\right) - p^t_{D_j} + p^t_{L_j}} &= {0} \label{eq:RealPowerBalanceNodej} && 
+    % {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
+    % - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= {P_{d_j}^t - P_{c_j}^t + p^t_{D_j} - p^t_{L_j}} 
+    {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
+    - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= {\left(P_{d_j}^t - P_{c_j}^t\right)} \nonumber \\[-0.8em]
+    {} & {\qquad  + p^t_{D_j} - p^t_{L_j}}
+    \label{eq:RealPowerBalanceNodej} &&
+\end{align}
+
+\vspace{-2.0em} % Adjust the space as needed
+
+\begin{align}
+    % {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\} 
+    % - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right) - q_{D_j}^t - q_{B_j}^t + q^t_{L_j}} &= {0}
+    % {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
+    % - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} & {} \nonumber \\[-0.50em]
+    % {- q_{D_j}^t - q_{B_j}^t + q^t_{L_j}} &= {0}
+    {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
+    - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= {q_{D_j}^t + q_{B_j}^t - q^t_{L_j}}
+    \label{eq:ReactivePowerBalanceNodej}
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    % {0} = {v_{i}^t - v_j^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t} \label{eq:KVL-branch-ij}
+    {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t}  
+    \label{eq:KVL-branch-ij} &&
+\end{align}
+
+
+% \begin{align}
+%     {0} &= {v_{i}^t - v_j^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t)} \nonumber && \\[-0.00em]
+%     {} &\qquad \qquad {+ \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t} \label{eq:KVL-branch-ij} &&
+% \end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    % {l_{ij}^t} & = {\frac{(P_{ij}^{t})^2 + (Q_{ij}^{t})^2}{v_i^t}} \label{eq:lij} && \\
+    % {0} &= {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2 - l_{ij}^t v_i^t} \label{eq:ApparentPowerEquationBFM} &&
+    % {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2 - l_{ij}^t v_i^t} &= {0} \label{eq:ApparentPowerEquationBFM} &&
+    {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2} &= {l_{ij}^t v_i^t} 
+    \label{eq:ApparentPowerEquationBFM} &&
+\end{align}
+
+\vspace{-2.0em} % Adjust the space as needed
+
+\begin{align}
+    {P^t_{Subs}} &\geq {0} \label{eq:substationRealPowerLimits} &&
+\end{align}
+
+\vspace{-2.0em} % Adjust the space as needed
+
+% \begin{align}
+%     { l^{t}_{ij} } &\in { \left[ 0, I^{2}_{R, ij}
+%     \right] } \label{eq:lim_lij} &&
+% \end{align}
+
+% \vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    { v^{t}_{j} } &\in { \left[ V^{2}_{min}, V^{2}_{max} \right]} \label{eq:lim_vj} &&
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    { q^{t}_{D_{j}} } 
+    &\in
+    { \left[-\sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}, \sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}\right] } \label{eq:qDj} &&
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t  \eta_c P_{c_j}^t - \Delta t\frac{1}{\eta_d} P_{d_j}^t } \label{eq:SOC-j} &&
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    { P^{t}_{c_{j}}, P^{t}_{d_{j}} }
+    &\in
+    { \left[ 0, P_{B_{R_{j}}} \right]}, \quad B_{j}^{0}=B_{j}^{T} \label{eq:lim_PcPdj} &&
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    % { q^{t}_{B_{j}} } 
+    % &\in 
+    % { \left[-\sqrt{ {S_{B_{R, j}}}^2 - {P_{B_{R, j}}}^2}, \sqrt{ {S_{B_{R, j}}}^2 - {P_{B_{R, j}}}^2}\right] } \label{eq:qBj} && \\
+    { q^{t}_{B_{j}} } 
+    &\in 
+    { \left[-\sqrt{0.44}P_{B_{R, j}}, \sqrt{0.44}P_{B_{R, j}}\right] } \label{eq:qBj} &&
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{align}
+    % { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:lim_Bj} && \\
+    { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:modelEndsHere-and-lim_Bj} &&
+    % {} & {} \nonumber \label{eq:modelEndsHere-and-lim_Bj}
+\end{align}
+
+A branch power flow model, given by \crefrange{eq:RealPowerBalanceNodej}{eq:ApparentPowerEquationBFM}, is used to represent power flow in distribution system.   Constraints \cref{eq:RealPowerBalanceNodej,eq:ReactivePowerBalanceNodej} model the active and reactive power balance at node $j$, respectively.
+% including contributions from any attached DERs ($p^t_{D_j} , q^t_{D_j}$) and/or batteries ($P^t_{c_j}, P^t_{d_j}, q^t_{B_j}$). 
+% The net active and reactive power injections at any bus \(j\) are represented by \cref{eq:pj,eq:qj} respectively. 
+The KVL equation for branch $(ij)$ is represented by \cref{eq:KVL-branch-ij}, while the equation describing the relationship between current magnitude, voltage magnitude and apparent power magnitude for branch $(ij)$ is given by \cref{eq:ApparentPowerEquationBFM}. Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:qDj} describes the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. \cref{eq:lim_PcPdj} also says that the initial and final energy levels for battery must be the same at the end of the optimization time horizon. Every battery's reactive power is also constrained by the corresponding inverter's rated capacity, modeled in \cref{eq:qBj}. For the safe and sustainable operation of the batteries, the energy $B^{t}_{j}$ is constrained to be within some percentage limits of the rated battery SOC capacity, modeled using \cref{eq:modelEndsHere-and-lim_Bj}
+
+% Node $i$ denotes the `parent' node of node $j$, which itself may be the parent of a set of $k$ `children' nodes (the set may contain one, many or even zero nodes, if $j$ is a leaf node). It may be noted that for a radial distribution system, each node $j$ can have only one `parent' node $i$.
+
+
+\subsection{ENApp based MPDOPF with Batteries} \label{subsec:ENApp}
+Assuming the presence of a feasible solution for the MPCOPF problem, the MPDOPF is formulated by decomposing the distribution system into multiple small areas. In this paper, the interaction between the two areas will follow the principle of ENApp algorithm. The ENApp algorithm leverages the radial topology of the distribution network to solve the network-level optimization problem in a distributed manner. Each area has a local controller (LC) that solves its specific local optimization problem. The local optimization problem will be the same MPOPF as described in Section II-B but defined using only the variables and parameters specific for the corresponding area. The boundary buses between two areas are accounted as voltage sources for downstream areas and load buses for upstream areas. By knowing the upstream voltage and downstream load data, the LCs will solve their area-specific MPOPF in parallel. Once LC problem converges, the downstream and upstream LCs inform power flows and voltage data to their respective upstream and downstream areas. The LCs will again solve their local MPOPF and exchange the updated boundary variables with their neighbors. This iterative process terminates after a convergence is achieved at all boundary buses. Comprehensive details of the ENApp algorithm are available in \cite{Sadnan}. Note that for the case of multi-period optimization with $T$ time steps, each area exchanges a data vector containing $2T$ boundary variables with its neighboring areas. This includes voltage and power flow data for each of the $T$ time steps. 
+
+% Solving a nonlinear nonconvex OPF problem is computationally intensive. In the ENApp paradigm, the original OPF problem is divided into several subproblems, based on physically connected `parent-child' area relationships in the radial distribution network. ENApp primiarly requires three classes of operations. The first is of course solving for the OPF of each individual subproblem, the second is checking for `boundary convergence' between related areas to check if further improvement iterations are needed and the third and last operation is exchange of variables between related areas for subsequent iterations. Out of these three operations, only solving the OPF is computationally intensive. 
+
+% The key advantage of using ENApp in preference to MPCOPF is its efficient division of the OPF problem into several smaller problems via efficient exploitation of power flow physics in a radial network \cite{Sadnan}. Typically, Nonlinear Programming problems grow superlinearly in complexity with increase in problem size, and thus division of the OPF problem into smaller, more manageable chunks greatly speeds up the solution process.
+
+% The solution process for each subproblem can then be parallelized, saving computation time even further.
+
+% Additionally, on paper it might appear that ENApp requires solving of the subproblems across multiple iterations, potentially nullifying the benefit from reduction in problem size. However in practice, once the first OPF iteration is completed for each area, the results can be used to `warm-start' subsequent iterations with significant speedups in solution times.
+
+% Thus, in essence, the `computational bottleneck' for ENApp is computing the OPF solution of its biggest subproblem, which typically translates to the single biggest area as part of the spatial decomposition of the radial distribution grid (assuming the number of DERs and Batteries is not significantly higher in another area).
+
+% The advantage of this smaller computational bottleneck will be readily seen in \Cref{subsec:simulationResults,subsec:scalabilityAnalysis} when compared against MPCOPF on the Test System. 
+
+% For the rest of this paper, we'll be addressing ENAPpp based Distributed Multi-Period OPF simply as MPDOPF for brevity.
+
+\end{document}

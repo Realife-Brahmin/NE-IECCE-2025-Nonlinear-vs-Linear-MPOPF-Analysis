@@ -1,0 +1,100 @@
+\documentclass{article}
+
+\usepackage{cite} % default
+
+\usepackage{amsmath,amssymb,amsfonts} % default
+\usepackage{cleveref}
+
+\usepackage{algorithmic} % default
+\usepackage{graphicx} % default
+
+% \usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+
+% \usepackage{lipsum} 
+\usepackage{textcomp} % default
+\usepackage{xcolor} % default
+% Any packages or configurations specific to this section
+\usepackage{lipsum}
+
+
+\newcommand{\spheading}[2][10em]{% \spheading[<width>]{<stuff>}
+  \rotatebox{90}{\parbox{#1}{\raggedright #2}}}
+
+\begin{document}
+
+\section{Introduction}
+
+% \subsection{Background and Prior Arts}
+Optimal power flow (OPF) methods are employed to optimally coordinate grid's controllable resources for different system-level objectives, such as economic operations, reliability, and resilience. The significance of OPF studies is growing in relevance at the distribution system level, driven by the increasing adoption of distributed energy resources (DERs), particularly photovoltaic systems (PVs) and battery energy storage systems (BESS). Furthermore, the adoption of BESS is gaining significance for managing the variability of DERs through controlled charging and discharging, thereby ensuring supply-demand balance \cite{tgangwar}. Incorporating BESS into OPF problems substantially raises the complexity of network optimization problems, transitioning from a single-period, time-decoupled OPF to a multi-period, time-coupled OPF.
+
+Traditionally, centralized OPF (COPF) methods have been widely used, where a central controller processes aggregated grid-edge data, executes the OPF algorithm, and sends control signals to manage resources \cite{spaul}. The COPF algorithms for DER management are generally developed as a mixed integer non-convex programming (MINCP) problem and then simplified either as a convex problem by adopting second-order cone programming (SOCP) relaxations \cite{Wei} \cite{Chowdhury}, or as a linear problem by adopting Taylor series expansion \cite{spaul}, polyhedral approximations \cite{Guo} or linear power flow models \cite{Yuan}. Unfortunately, COPF methods pose scalability challenges for larger networks and for difficult classes of OPF problems such multi-period time-coupled formulations required to optimally manage BESS. 
+
+% Yuan et al. \cite{Yuan} propose a linear OPF model for distribution networks depending upon the locational marginal price (LMP). The LMP is calculated by including reactive power components and voltage constraints. Wei et al. \cite{Wei} develop a fixed point iteration algorithm for centralized OPF problem solution and LMP determination by leveraging the benefits of load elasticity. Second-order cone programming (SOCP) relaxation is used to convert the non-convex branch flow model into a convex one. Guo et al. \cite{Guo} develop a linear OPF model after linearizing the second-order cone constraints with polyhedral approximations. The OPF problem is formulated by considering the variable solar power generation as parameters and hence the overall problem takes the form of a parametric distribution OPF. 
+
+To address scalability challenges, distributed OPF (DOPF) algorithms have been introduced. These algorithms decompose the COPF problem into smaller sub-problems that are solved concurrently, leveraging communication among neighboring areas. In this context, the Auxiliary Problem Principle (APP) and the Alternating Direction Method of Multipliers (ADMM) are widely adopted algorithms for solving various OPF problems, including non-convex formulations \cite{Fazio}, convex-relaxed versions \cite{Zheng, Wang, Biswas}, and linear approximations \cite{Paul2}. Similarly, in a prior study \cite{Sadnan}, the authors' research group introduced a DOPF framework utilizing the Equivalent Network Approximation method (ENApp). This approach was shown to require fewer macro iterations compared to traditional ADMM or APP algorithms for solving DOPF problems.
+
+
+% Fazio et al. \cite{Fazio} used the Auxiliary Problem Principle (APP) based DOPF to minimize the voltage deviation by segregating the entire distribution network into multiple voltage control zones. The non-convex problem is relaxed and solved as quadratic convex programming. Alternating direction method of multipliers (ADMM) based DOPF is proposed in \cite{Zheng} for determining the reactive power dispatch schedules for capacitor banks and static VAR compensators. The original non-convex problem is solved by adopting SOCP relaxation. Another ADMM based semidefinite programming (SDP) relaxed DOPF portfolio is designed in  \cite{Wang} for an AC network having only wind generators. Biswas et al. \cite{Biswas} also used SDP relaxation to develop DOPF algorithms using vanilla and accelerated ADMM methods. 
+
+The above references \cite{Wei}-\cite{Paul2} mainly focused on solving single time-period OPF problems and did not include the coordination of grid-edge devices that introduce time-coupled constraints, such as BESS. The inclusion of BESS models results in a multi-period OPF (MPOPF) problem with time-coupled constraints. Reference \cite{Gabash} proposed a nonlinear multi-period centralized OPF (MPCOPF) approach to optimally coordinate  active-reactive power dispatch from batteries and DERs in distribution systems. Alizadeh and Capitanescu \cite{Alizadeh} proposed a stochastic security-constrained MPCOPF, which sequentially solves a specific number of linear approximations of the original problem. Usman and Capitanescu \cite{Usman} developed three different MPCOPF frameworks. All three approaches begin by solving a linear program to optimize the binary variables first, followed by either a linear or non-linear program to optimize the continuous variables. Optimal battery schedules are determined in \cite{Aghdam} considering uncertain renewable power generation by solving an MPCOPF. A bi-level robust MPCOPF is suggested in \cite{Zhang1} for determining active and reactive power dispatches from the grid edge devices. Wu et al. \cite{Wu} framed a Benders Decomposition (BD) based multi-period distributed OPF (MPDOPF) after decomposing the original centralized multi-parametric quadratic problem into one master and multiple sub-problems. 
+
+Over recent years, numerous research efforts have focused on developing MPOPF methodologies. However, the following research gaps persist.
+\begin{enumerate}
+    \item The MPOPF models are mainly solved centrally \cite{Gabash}-\cite{Zhang1}. The centralized methods suffer from scalability and computational challenges, requiring significantly long solution times, rendering them unsuitable for operational decision-making.
+    \item Reference \cite{Wu} proposed a MPDOPF framework using Benders Decomposition. However, this approach suffers from slow convergence and needs a central controller to solve the master problem. 
+\end{enumerate}
+
+\begin{table}[t]
+\caption{\textsc{Taxonomy table for comparison}}
+\label{table1}
+\begin{center}
+\begin{tabular}{|p{1.2cm}||p{0.2cm}||p{0.2cm}||p{0.2cm}||p{0.2cm}||p{0.2cm}||p{0.2cm}||p{2.5cm}|}   %{l *{8}{r}}
+    \hline
+    \spheading{References} & 
+    \spheading{DERs} & 
+    \spheading{Batteries} & 
+    \spheading{Single period OPF} & 
+    \spheading{Multi-period OPF} & 
+    \spheading{Centralized OPF} &
+    \spheading{Distributed OPF} &
+    \spheading{Framework} \\
+    \hline
+    
+    \cite{Wei, Chowdhury}     &      &      &  \checkmark    &      &  \checkmark &   & Convex\\ \hline 
+
+    \cite{Guo}     &  \checkmark    &            & \checkmark     &      & \checkmark  &    & Linear \\ \hline
+
+    \cite{Yuan}     &      &            & \checkmark     &      & \checkmark     &    & Linear \\ \hline
+    
+    \cite{Fazio}     & \checkmark     &           & \checkmark      &      &       &  \checkmark   & Convex (APP)\\ \hline  
+    
+    \cite{Zheng}- \cite{Biswas}     & \checkmark     &           & \checkmark      &      &       &  \checkmark   & Convex (ADMM)\\ \hline
+
+    \cite{Paul2}     & \checkmark     &           &  \checkmark    &      &      & \checkmark  & Linear (ADMM)\\ \hline
+
+    \cite{Sadnan}     & \checkmark     &           &  \checkmark    &      &      & \checkmark  & Non-convex (ENApp)\\ \hline
+
+    \cite{Gabash}     & \checkmark     &  \checkmark         &       & \checkmark     & \checkmark      &    & Non-convex\\ \hline
+
+    \cite{Alizadeh, Usman, Aghdam, Zhang1}     & \checkmark     &  \checkmark         &       & \checkmark     & \checkmark      &    & Linear/convex\\ \hline
+
+    \cite{Wu}     & \checkmark     &  \checkmark         &       & \checkmark     &       &  \checkmark  & Quadratic (BD)\\ \hline
+    
+    This paper &  \checkmark    & \checkmark  &      &   \checkmark   &    & \checkmark    &  Non-convex (ENApp) \\
+    \hline
+  \end{tabular}
+\end{center}
+\vspace{-6mm}
+\end{table}
+
+
+% \subsection{Research Gaps and Contributions}
+This article aims to address the above research gaps by developing a spatially distributed MPOPF (MPDOPF) framework. The distribution system is divided into multiple connected areas, each solving its own local MPOPF problem and periodically communicating the values of boundary variables with neighboring areas. The interaction between the areas is modeled by following the principles of the ENApp DOPF algorithm. ENApp outperforms the other DOPF algorithms in terms of convergence speed and requires fewer macro iterations \cite{Sadnan}. A taxonomy table to compare the existing studies and the present work is provided in Table \ref{table1}. The specific contributions of this paper are listed below:
+\begin{enumerate}
+    \item A MPOPF framework is proposed for distribution systems consisting of DERs and batteries. The integer variables related to battery charging/discharging are avoided by adding a ``Battery Loss'' cost term in the objective function. The loss term will ensure the non-occurrence of simultaneous charging/discharging operations.
+    \item The original MPOPF framework is solved in a distributed manner by following the principles of the ENApp-based distributed OPF. This provides faster convergence and requires less solution time compared to the traditional MPCOPF.
+    \item Detailed comparative analyses between traditional MPCOPF and the proposed MPDOPF are done using the IEEE 123 bus test system and the benefits of the proposed approach are demonstrated. ACOPF feasibility validation is also performed by implementing the derived controls into an OpenDSS model of the test system.
+\end{enumerate}
+
+\end{document}
