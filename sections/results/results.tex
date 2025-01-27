@@ -74,14 +74,14 @@ The second section of the \Cref{table:opt-5-20-30} i.e. `Simulation results' sho
 
 To ensure that battery charging and discharging complementarity is respected without relying on integer constraints, the battery charging and discharging profiles were carefully examined. The results confirm this complementarity, as illustrated in \Cref{fig:batt-plot-dopf-5-20-30-genCost} as one such example.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\linewidth]{../figures/T5-pv20-batt30-genCost/dopf/BatteryPlots/macroItr_5_genCost_Battery_1_alpha_0.001.png}
-    \vspace{-5mm}
-    \caption{Charging-discharging and SOC graphs for battery at bus 3 located in Area 1 obtained by MPDOPF}
-    \label{fig:batt-plot-dopf-5-20-30-genCost}
-    \vspace{-3mm}
-\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{../figures/T5-pv20-batt30-genCost/dopf/BatteryPlots/macroItr_5_genCost_Battery_1_alpha_0.001.png}
+%     \vspace{-5mm}
+%     \caption{Charging-discharging and SOC graphs for battery at bus 3 located in Area 1 obtained by MPDOPF}
+%     \label{fig:batt-plot-dopf-5-20-30-genCost}
+%     \vspace{-3mm}
+% \end{figure}
 
 \subsubsection{Workflow Analysis}
 % The workflow of the MPDOPF algorithm, which involves the exchange of boundary variables between parent-child area pairs, can be seen in the convergence plots in \Cref{fig:voltage_1_2,fig:convergenceCurves-5-20-30}, with each line graph representing a particular time period in both plots. Similarly, the convergence of the objective function to its optimal value with every iteration is shown by \Cref{fig:outputConvergence-5-pv20-batt30-genCost}. From these plots, it may be noted that though initially the decision variables may be away from their optimal values, with rolling iterations they make their way to optimum values, in this case converging after 5 macro iterations. 
@@ -310,30 +310,30 @@ The workflow of the MPDOPF algorithm, which involves the exchange of boundary va
 %     \vspace{-4mm}
 % \end{figure}
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\columnwidth]{../figures/T5-pv20-batt30-genCost/dopf/convergenceCurves/BoundaryVoltage_vs_t_vs_macroItr_T_5_Areas_1_2_genCost_pv_20_batt_30_crop.png}
-    \caption{ Shared voltage data from Area $1$ to Area $2$.}
-    \label{fig:voltage_1_2}
-    \vspace{-4mm}
-\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=0.8\columnwidth]{../figures/T5-pv20-batt30-genCost/dopf/convergenceCurves/BoundaryVoltage_vs_t_vs_macroItr_T_5_Areas_1_2_genCost_pv_20_batt_30_crop.png}
+%     \caption{ Shared voltage data from Area $1$ to Area $2$.}
+%     \label{fig:voltage_1_2}
+%     \vspace{-4mm}
+% \end{figure}
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\columnwidth]{../figures/T5-pv20-batt30-genCost/dopf/convergenceCurves/BoundaryRealPower_vs_t_vs_macroItr_T_5_Areas_2_4_genCost_pv_20_batt_30_crop.png}
-    \caption{Shared real power data from Area $4$ into Area $2$.}
-    % \label{fig:real_power_2_4}
-  \label{fig:convergenceCurves-5-20-30}
-    \vspace{-4mm}
-\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=0.8\columnwidth]{../figures/T5-pv20-batt30-genCost/dopf/convergenceCurves/BoundaryRealPower_vs_t_vs_macroItr_T_5_Areas_2_4_genCost_pv_20_batt_30_crop.png}
+%     \caption{Shared real power data from Area $4$ into Area $2$.}
+%     % \label{fig:real_power_2_4}
+%   \label{fig:convergenceCurves-5-20-30}
+%     \vspace{-4mm}
+% \end{figure}
 
-\begin{figure}[t] % output variable convergence curve
-    \centering
-    \includegraphics[height=0.25\textheight]{../figures/T5-pv20-batt30-genCost/dopf/outputCurves/ObjectiveConvergenceCurves_Horizon_5.png}
-    \caption{Convergence of objective function value with each MPDOPF iteration}
-    \label{fig:outputConvergence-5-pv20-batt30-genCost}
-    \vspace{-4mm}
-\end{figure}
+% \begin{figure}[t] % output variable convergence curve
+%     \centering
+%     \includegraphics[height=0.25\textheight]{../figures/T5-pv20-batt30-genCost/dopf/outputCurves/ObjectiveConvergenceCurves_Horizon_5.png}
+%     \caption{Convergence of objective function value with each MPDOPF iteration}
+%     \label{fig:outputConvergence-5-pv20-batt30-genCost}
+%     \vspace{-4mm}
+% \end{figure}
 
 \subsection{Scalability Analysis} \label{subsec:scalabilityAnalysis}
 
@@ -343,13 +343,13 @@ From the comparison against MPCOPF in \Cref{table:opt-10-20-30}, it can again be
 % It is noted that the solution time increased drastically for MPCOPF with the increasing length of the study horizon. However, the solution time increment for MPDOPF is comparatively less. Therefore, the proposed spatially distributed MPOPF framework is scalable to some extent.
 It was observed that the solution time for MPCOPF increased significantly with the length of the study horizon, whereas the increase in solution time for MPDOPF was comparatively smaller. This indicates that the proposed spatially distributed MPOPF framework is scalable to a certain extent.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[height=0.25\textheight]{../figures/T10-inputCurves/InputCurves_Horizon_10.png}
-    \caption{Forecasts for demand power, irradiance and cost of substation power over a 10 hour Horizon}
-    \label{fig:inputCurve-10}
-    % \vspace{-4mm}
-\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[height=0.25\textheight]{../figures/T10-inputCurves/InputCurves_Horizon_10.png}
+%     \caption{Forecasts for demand power, irradiance and cost of substation power over a 10 hour Horizon}
+%     \label{fig:inputCurve-10}
+%     % \vspace{-4mm}
+% \end{figure}
 
 
 \begin{table}[H]
