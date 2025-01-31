@@ -51,14 +51,27 @@ The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_wit
 % \begin{equation}
 %     \min {\sum_{t = 1}^{T} \left[ C^t P^t_{Subs} + \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j}\right\} \right] } \label{eq:genCost_withSCD}
 % \end{equation}
+% \begin{equation}
+%     \begin{split}
+%         \min \sum_{t = 1}^{T} \left[ C^t P^t_{Subs} \Delta t+ \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} \right. \right. \\
+%         \left. \left. + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\} \right]
+%     \end{split}
+%     \label{eq:genCost_withSCD}
+% \end{equation}
 \begin{equation}
     \begin{split}
-        \min \sum_{t = 1}^{T} \left[ C^t P^t_{Subs} \Delta t+ \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} \right. \right. \\
-        \left. \left. + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\} \right]
+        \min \sum_{t = 1}^{T} \left\{ f_0^t + f_{SCD}^t \right\}
     \end{split}
     \label{eq:genCost_withSCD}
 \end{equation}
 
+\text{where}
+\begin{equation}
+    f_0^t = C^t P^t_{Subs} \Delta t \nonumber
+\end{equation}
+\begin{equation}
+    f_{SCD}^t = \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\} \nonumber
+\end{equation}
 
 Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere-and-lim_Bj} as given below:
 
