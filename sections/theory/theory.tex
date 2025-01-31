@@ -76,11 +76,6 @@ The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_wit
 Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere-and-lim_Bj} as given below:
 
 \begin{align}
-    % {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
-    % - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} \nonumber &\ {} \\[-0.50em]
-    % {\hspace{2em} - \left(P_{d_j}^t - P_{c_j}^t\right) - p^t_{D_j} + p^t_{L_j}} &= {0} \label{eq:RealPowerBalanceNodej} && 
-    % {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
-    % - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= {P_{d_j}^t - P_{c_j}^t + p^t_{D_j} - p^t_{L_j}} 
     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
     - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= {\left(P_{d_j}^t - P_{c_j}^t\right)} \nonumber \\[-0.8em]
     {} & {\qquad  + p^t_{D_j} - p^t_{L_j}}
@@ -90,11 +85,6 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-2.0em} % Adjust the space as needed
 
 \begin{align}
-    % {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\} 
-    % - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right) - q_{D_j}^t - q_{B_j}^t + q^t_{L_j}} &= {0}
-    % {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
-    % - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} & {} \nonumber \\[-0.50em]
-    % {- q_{D_j}^t - q_{B_j}^t + q^t_{L_j}} &= {0}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
     - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= {q_{D_j}^t + q_{B_j}^t - q^t_{L_j}}
     \label{eq:ReactivePowerBalanceNodej}
@@ -103,23 +93,13 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    % {0} = {v_{i}^t - v_j^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t} \label{eq:KVL-branch-ij}
     {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t}  
     \label{eq:KVL-branch-ij} &&
 \end{align}
 
-
-% \begin{align}
-%     {0} &= {v_{i}^t - v_j^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t)} \nonumber && \\[-0.00em]
-%     {} &\qquad \qquad {+ \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t} \label{eq:KVL-branch-ij} &&
-% \end{align}
-
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    % {l_{ij}^t} & = {\frac{(P_{ij}^{t})^2 + (Q_{ij}^{t})^2}{v_i^t}} \label{eq:lij} && \\
-    % {0} &= {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2 - l_{ij}^t v_i^t} \label{eq:ApparentPowerEquationBFM} &&
-    % {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2 - l_{ij}^t v_i^t} &= {0} \label{eq:ApparentPowerEquationBFM} &&
     {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2} &= {l_{ij}^t v_i^t} 
     \label{eq:ApparentPowerEquationBFM} &&
 \end{align}
@@ -131,13 +111,6 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \end{align}
 
 \vspace{-2.0em} % Adjust the space as needed
-
-% \begin{align}
-%     { l^{t}_{ij} } &\in { \left[ 0, I^{2}_{R, ij}
-%     \right] } \label{eq:lim_lij} &&
-% \end{align}
-
-% \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
     { v^{t}_{j} } &\in { \left[ V^{2}_{min}, V^{2}_{max} \right]} \label{eq:lim_vj} &&
@@ -168,9 +141,6 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    % { q^{t}_{B_{j}} } 
-    % &\in 
-    % { \left[-\sqrt{ {S_{B_{R, j}}}^2 - {P_{B_{R, j}}}^2}, \sqrt{ {S_{B_{R, j}}}^2 - {P_{B_{R, j}}}^2}\right] } \label{eq:qBj} && \\
     { q^{t}_{B_{j}} } 
     &\in 
     { \left[-\sqrt{0.44}P_{B_{R, j}}, \sqrt{0.44}P_{B_{R, j}}\right] } \label{eq:qBj} &&
@@ -179,14 +149,11 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    % { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:lim_Bj} && \\
     { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:modelEndsHere-and-lim_Bj} &&
-    % {} & {} \nonumber \label{eq:modelEndsHere-and-lim_Bj}
 \end{align}
 
 A branch power flow model, given by \crefrange{eq:RealPowerBalanceNodej}{eq:ApparentPowerEquationBFM}, is used to represent power flow in distribution system.   Constraints \cref{eq:RealPowerBalanceNodej,eq:ReactivePowerBalanceNodej} model the active and reactive power balance at node $j$, respectively.
-% including contributions from any attached DERs ($p^t_{D_j} , q^t_{D_j}$) and/or batteries ($P^t_{c_j}, P^t_{d_j}, q^t_{B_j}$). 
-% The net active and reactive power injections at any bus \(j\) are represented by \cref{eq:pj,eq:qj} respectively. 
+
 The KVL equation for branch $(ij)$ is represented by \cref{eq:KVL-branch-ij}, while the equation describing the relationship between current magnitude, voltage magnitude and apparent power magnitude for branch $(ij)$ is given by \cref{eq:ApparentPowerEquationBFM}. Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:qDj} describes the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. \cref{eq:lim_PcPdj} also says that the initial and final energy levels for battery must be the same at the end of the optimization time horizon. Every battery's reactive power is also constrained by the corresponding inverter's rated capacity, modeled in \cref{eq:qBj}. For the safe and sustainable operation of the batteries, the energy $B^{t}_{j}$ is constrained to be within some percentage limits of the rated battery SOC capacity, modeled using \cref{eq:modelEndsHere-and-lim_Bj}
 
 % Node $i$ denotes the `parent' node of node $j$, which itself may be the parent of a set of $k$ `children' nodes (the set may contain one, many or even zero nodes, if $j$ is a leaf node). It may be noted that for a radial distribution system, each node $j$ can have only one `parent' node $i$.
