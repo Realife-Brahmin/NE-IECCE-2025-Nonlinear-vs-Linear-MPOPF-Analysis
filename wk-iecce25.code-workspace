@@ -11,6 +11,8 @@
 			"MPCOPF",
 			"MPDOPF",
 			"MPOPF"
-		]
+		],
+		"workbench.colorTheme": "Slack Theme Aubergine Dark",
+		"workbench.preferredDarkColorTheme": "Slack Theme Aubergine Dark"
 	}
 }
