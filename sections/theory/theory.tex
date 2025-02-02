@@ -75,7 +75,7 @@ The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_wit
 % \end{equation}
 % \begin{equation}
 \begin{align}
-    f_{SCD}^t = \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\}
+    f_{SCD}^t = \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j} \right\} \nonumber
 \end{align}
 % \end{equation}
 
@@ -91,12 +91,12 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{align}
     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
     - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= p_j^t
-    \label{eq:RealPowerBalanceNodej} &&
+    \label{eq:RealPowerBalanceNodej}
 \end{align}
 
 \text{where}
 \begin{align}
-    p_j^t &= \left(P_{d_j}^t - P_{c_j}^t\right) + p^t_{D_j} - p^t_{L_j} \nonumber
+    p_j^t &= \left(P_{d_j}^t - P_{c_j}^t\right) + p^t_{D_j} - p^t_{L_j} \label{eq:RealPowerBalanceNodej_pj}
 \end{align}
 
 \vspace{-2.0em} % Adjust the space as needed
@@ -111,26 +111,26 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \begin{align}
     {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t}  
-    \label{eq:KVL-branch-ij} &&
+    \label{eq:KVL-branch-ij}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
     {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2} &= {l_{ij}^t v_i^t} 
-    \label{eq:ApparentPowerEquationBFM} &&
+    \label{eq:ApparentPowerEquationBFM}
 \end{align}
 
 \vspace{-2.0em} % Adjust the space as needed
 
 \begin{align}
-    {P^t_{Subs}} &\geq {0} \label{eq:substationRealPowerLimits} &&
+    {P^t_{Subs}} &\geq {0} \label{eq:substationRealPowerLimits}
 \end{align}
 
 \vspace{-2.0em} % Adjust the space as needed
 
 \begin{align}
-    { v^{t}_{j} } &\in { \left[ V^{2}_{min}, V^{2}_{max} \right]} \label{eq:lim_vj} &&
+    { v^{t}_{j} } &\in { \left[ V^{2}_{min}, V^{2}_{max} \right]} \label{eq:lim_vj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -138,13 +138,13 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{align}
     { q^{t}_{D_{j}} } 
     &\in
-    { \left[-\sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}, \sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}\right] } \label{eq:qDj} &&
+    { \left[-\sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}, \sqrt{ {S_{D_{R, j}}}^2 - {p^{t}_{D_{j}}}^2}\right] } \label{eq:qDj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t  \eta_c P_{c_j}^t - \Delta t\frac{1}{\eta_d} P_{d_j}^t } \label{eq:SOC-j} &&
+    {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t  \eta_c P_{c_j}^t - \Delta t\frac{1}{\eta_d} P_{d_j}^t } \label{eq:SOC-j}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -152,7 +152,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{align}
     { P^{t}_{c_{j}}, P^{t}_{d_{j}} }
     &\in
-    { \left[ 0, P_{B_{R_{j}}} \right]}, \quad B_{j}^{0}=B_{j}^{T} \label{eq:lim_PcPdj} &&
+    { \left[ 0, P_{B_{R_{j}}} \right]}, \quad B_{j}^{0}=B_{j}^{T} \label{eq:lim_PcPdj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -160,13 +160,13 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{align}
     { q^{t}_{B_{j}} } 
     &\in 
-    { \left[-\sqrt{0.44}P_{B_{R, j}}, \sqrt{0.44}P_{B_{R, j}}\right] } \label{eq:qBj} &&
+    { \left[-\sqrt{0.44}P_{B_{R, j}}, \sqrt{0.44}P_{B_{R, j}}\right] } \label{eq:qBj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:modelEndsHere-and-lim_Bj} &&
+    { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:modelEndsHere-and-lim_Bj}
 \end{align}
 
 A branch power flow model, given by \crefrange{eq:RealPowerBalanceNodej}{eq:ApparentPowerEquationBFM}, is used to represent power flow in distribution system.   Constraints \cref{eq:RealPowerBalanceNodej,eq:ReactivePowerBalanceNodej} model the active and reactive power balance at node $j$, respectively.
