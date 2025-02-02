@@ -144,7 +144,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t  \eta_c P_{c_j}^t - \Delta t\frac{1}{\eta_d} P_{d_j}^t } \label{eq:SOC-j}
+    {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t  \eta_c P_{c_j}^t - \Delta t\frac{1}{\eta_d} P_{d_j}^t }, \quad B_{j}^{0}=B_{j}^{T}  \label{eq:SOC-j}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -152,7 +152,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{align}
     { P^{t}_{c_{j}}, P^{t}_{d_{j}} }
     &\in
-    { \left[ 0, P_{B_{R_{j}}} \right]}, \quad B_{j}^{0}=B_{j}^{T} \label{eq:lim_PcPdj}
+    { \left[ 0, P_{B_{R_{j}}} \right]}\label{eq:lim_PcPdj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
