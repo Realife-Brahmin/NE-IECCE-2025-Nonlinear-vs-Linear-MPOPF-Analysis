@@ -94,17 +94,32 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
     \label{eq:RealPowerBalanceNodej}
 \end{align}
 
-\text{where}
+\vspace{-2.0em} % Adjust the space as needed
+
+% \text{where}
 \begin{align}
     p_j^t &= \left(P_{d_j}^t - P_{c_j}^t\right) + p^t_{D_j} - p^t_{L_j} \label{eq:RealPowerBalanceNodej_pj}
 \end{align}
 
 \vspace{-2.0em} % Adjust the space as needed
 
+% \begin{align}
+%     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
+%     - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= {q_{D_j}^t + q_{B_j}^t - q^t_{L_j}}
+%     \label{eq:ReactivePow erBalanceNodej}
+% \end{align}
+
 \begin{align}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
-    - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= {q_{D_j}^t + q_{B_j}^t - q^t_{L_j}}
-    \label{eq:ReactivePowerBalanceNodej}
+    - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= q_j^t
+    \label{eq:ReactivePowerBalanceNodej} 
+\end{align}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+% \text{where}
+\begin{align}
+    q_j^t &= q_{D_j}^t + q_{B_j}^t - q^t_{L_j} \label{eq:ReactivePowerBalanceNodej_qj}
 \end{align}
 
 \vspace{-1.5em} % Adjust the space as needed
