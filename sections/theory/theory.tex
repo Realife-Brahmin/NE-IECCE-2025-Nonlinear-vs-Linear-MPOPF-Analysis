@@ -189,11 +189,14 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
-    { q^{t}_{B_{j}} } 
-    &\in 
-    { \left[-\sqrt{0.44}P_{B_{R, j}}, \sqrt{0.44}P_{B_{R, j}}\right] } \label{eq:battery-inverter-reactive-power-1ph-NL}
+    {(P_{B_j}^t)^2 + (q_{B_j}^t)^2} &\leq {S_{B_{R, j}}^2}
+    \label{eq:battery-inverter-reactive-power-1ph-NL}
 \end{align}
 
+
+\begin{align}
+{ P_{B_j}^t } &= { P_{d_j}^t - P_{c_j}^t } \label{eq:battery-power-output-definition}
+\end{align}
 \vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
