@@ -13,7 +13,7 @@
 % \subsection{Simulation Data: IEEE 123 Bus Test System}
 % The case studies are conducted on the balanced three-phase version of the IEEE 123 bus test system, which has $85$ Load Nodes. Additionally, $20 \% \, (17)$ and $30 \% \, (26)$ of these load nodes also contain reactive power controllable PVs and BESS, respectively. Their ratings are as per \Cref{table:parameter-values}. To demonstrate the effectiveness of the proposed algorithm, the test system is divided into four areas as shown in \Cref{fig:ieee123-four-area-figure}. It is assumed that a horizon-wide forecast for loads $p^t_L$, solar power output $p^t_D$ and cost of substation power  $C^t$ is available to the distribution system operator. Initially, the study is carried out for 5 hours with input data shown in \Cref{fig:inputCurve-5}. The five-hour workflow is described below. 
 
-\def\ds{\rule{0pt}{1.5ex}} % this will lower the subscript by that amount, useful for $p_{D_{R_j}}$ where otherwise p and D appear to be almost at the same level.
+\def\ds{\rule{0pt}{1.5ex}} % this will lower the subscript by that amount, useful for $p_{D_{R,j}}$ where otherwise p and D appear to be almost at the same level.
 
 \begin{table}[t]
     \centering
@@ -22,11 +22,11 @@
     \hline
     \textbf{Parameter} & \textbf{Value} \\ \hline
     $V_{min}, V_{max}$ & 0.95\, pu, 1.05\, pu \\ \hline
-    $p_{\ds D_{R_j}}$ & $0.33 p_{\ds L_{R_j}}$ \\ \hline
-    $S_{D_{R_j}}$ & $1.2 p_{\ds D_{R_j}}$ \\ \hline
-    $P_{B_{R_j}}$ & $0.33 p_{\ds L_{R_j}}$ \\ \hline
-    $S_{B_{R_j}}$ & $1.2 P_{\ds B_{R_j}}$ \\ \hline
-    $B_{R_j}$ & $T_{fullCharge} \times P_{B_{R_j}}$ \\ \hline
+    $p_{\ds D_{R,j}}$ & $0.33 p_{\ds L_{R,j}}$ \\ \hline
+    $S_{D_{R,j}}$ & $1.2 p_{\ds D_{R,j}}$ \\ \hline
+    $P_{B_{R,j}}$ & $0.33 p_{\ds L_{R,j}}$ \\ \hline
+    $S_{B_{R,j}}$ & $1.2 P_{\ds B_{R,j}}$ \\ \hline
+    $B_{R,j}$ & $T_{fullCharge} \times P_{B_{R,j}}$ \\ \hline
     $T_{fullCharge}$ & 4 h \\ \hline
     $\Delta t$ & 1 h \\ \hline
     $\eta_c, \eta_d$ & 0.95, 0.95 \\ \hline
@@ -54,7 +54,7 @@
     \vspace{-4mm}
 \end{figure}
 
-\def\ds{\rule{0pt}{1.5ex}} % this will lower the subscript by that amount, useful for $p_{D_{R_j}}$ where otherwise p and D appear to be almost at the same level.
+\def\ds{\rule{0pt}{1.5ex}} % this will lower the subscript by that amount, useful for $p_{D_{R,j}}$ where otherwise p and D appear to be almost at the same level.
 
 
 
