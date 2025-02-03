@@ -26,4 +26,9 @@ N.~Nazir and M.~Almassalkhi, ``{Guaranteeing a Physically Realizable Battery
   Dispatch Without Charge-Discharge Complementarity Constraints},'' \emph{IEEE
   Trans. Smart Grid}, vol.~14, no.~3, pp. 2473--2476, Sep. 2021.
 
+\bibitem{Ahmadi2014Oct}
+H.~Ahmadi and J.~R. Mart{\ifmmode\imath\else\i\fi}', ``{Linear Current Flow
+  Equations With Application to Distribution Systems Reconfiguration},''
+  \emph{IEEE Trans. Power Syst.}, vol.~30, no.~4, pp. 2073--2080, Oct. 2014.
+
 \end{thebibliography}

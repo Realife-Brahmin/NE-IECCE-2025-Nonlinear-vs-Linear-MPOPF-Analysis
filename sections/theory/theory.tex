@@ -126,11 +126,11 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \vspace{-1.0em} % Adjust the space as needed
 
-\begin{alignNL}
+\begin{alignL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
     - \left(Q_{ij}^t\right)} &= q_j^t
     \label{eq:ReactivePowerBalanceNodej} 
-\end{alignNL}
+\end{alignL}
 
 \vspace{-1.5em} % Adjust the space as needed
 % \text{where}
@@ -217,10 +217,11 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 % Subequations example using alignLsub
 \begin{subequations}
+    \label{eq:battery-inverter-reactive-power-1ph-L}
     \begin{alignLsub}
-        q_{B_j}^t &\in \left[-\sqrt{3} (P_{B_j}^t + S_{B_{R, j}}), -\sqrt{3} (P_{B_j}^t - S_{B_{R, j}})\right] \label{eq:batreact-L-a} \\
-        q_{B_j}^t &\in \left[-\frac{\sqrt{3}}{2} S_{B_{R, j}}, \frac{\sqrt{3}}{2} S_{B_{R, j}}\right] \label{eq:batreact-L-b} \\
-        q_{B_j}^t &\in \left[\sqrt{3} (P_{B_j}^t - S_{B_{R, j}}), \sqrt{3} (P_{B_j}^t + S_{B_{R, j}})\right] \label{eq:batreact-L-c}
+        q_{B_j}^t &\in \left[-\sqrt{3} (P_{B_j}^t + S_{B_{R, j}}), -\sqrt{3} (P_{B_j}^t - S_{B_{R, j}})\right]  \\
+        q_{B_j}^t &\in \left[-\frac{\sqrt{3}}{2} S_{B_{R, j}}, \frac{\sqrt{3}}{2} S_{B_{R, j}}\right] \\
+        q_{B_j}^t &\in \left[\sqrt{3} (P_{B_j}^t - S_{B_{R, j}}), \sqrt{3} (P_{B_j}^t + S_{B_{R, j}})\right] 
     \end{alignLsub}
 \end{subequations}
 
@@ -237,7 +238,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 A branch power flow model, given by \crefrange{eq:RealPowerBalanceNodej}{eq:ApparentPowerEquationBFM}, is used to represent power flow in distribution system.   Constraints \cref{eq:RealPowerBalanceNodej,eq:ReactivePowerBalanceNodej} model the active and reactive power balance at node $j$, respectively.
 
-The KVL equation for branch $(ij)$ is represented by \cref{eq:KVL-branch-ij}, while the equation describing the relationship between current magnitude, voltage magnitude and apparent power magnitude for branch $(ij)$ is given by \cref{eq:ApparentPowerEquationBFM}. Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:pv-inverter-reactive-power-limits-1ph,eq:pv-inverter-reactive-power-maximum-1ph} describe the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. \cref{eq:lim_PcPdj} also says that the initial and final energy levels for battery must be the same at the end of the optimization time horizon. Every battery's reactive power is also constrained by the corresponding inverter's rated capacity, modeled in \cref{eq:battery-inverter-reactive-power-1ph-NL}. For the safe and sustainable operation of the batteries, the energy $B^{t}_{j}$ is constrained to be within some percentage limits of the rated battery SOC capacity, modeled using \cref{eq:modelEndsHere-and-lim_Bj}
+The KVL equation for branch $(ij)$ is represented by \cref{eq:KVL-branch-ij}, while the equation describing the relationship between current magnitude, voltage magnitude and apparent power magnitude for branch $(ij)$ is given by \cref{eq:ApparentPowerEquationBFM}. Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:pv-inverter-reactive-power-limits-1ph,eq:pv-inverter-reactive-power-maximum-1ph} describe the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. \cref{eq:lim_PcPdj} also says that the initial and final energy levels for battery must be the same at the end of the optimization time horizon. Reactive Power Output from Battery Inverters are is constrained by the quadratic inequality \cref{eq:battery-inverter-reactive-power-1ph-NL}. A linearized set of equations approximating the same are given by \cref{eq:battery-inverter-reactive-power-1ph-L},  which utilize a hexagonal approximation of the inequality \cite{Ahmadi2014Oct}. For the safe and sustainable operation of the batteries, the energy $B^{t}_{j}$ is constrained to be within some percentage limits of the rated battery SOC capacity, modeled using \cref{eq:modelEndsHere-and-lim_Bj}
 
 % Node $i$ denotes the `parent' node of node $j$, which itself may be the parent of a set of $k$ `children' nodes (the set may contain one, many or even zero nodes, if $j$ is a leaf node). It may be noted that for a radial distribution system, each node $j$ can have only one `parent' node $i$.
 

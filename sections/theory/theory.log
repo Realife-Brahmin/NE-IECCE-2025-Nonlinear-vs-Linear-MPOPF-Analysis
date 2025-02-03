@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 02:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 03:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,6 +574,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: Citation `Nazir2021Sep' on page 1 undefined on input line 52.
 
+
+LaTeX Warning: Citation `Ahmadi2014Oct' on page 1 undefined on input line 241.
+
 [1
 
 {C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
@@ -606,17 +609,17 @@ Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: 61727F2309B0976A86246A5F11185051;411.
  ) 
 Here is how much of TeX's memory you used:
- 16824 strings out of 475551
- 294507 string characters out of 5762555
- 1978238 words of memory out of 5000000
- 37755 multiletter control sequences out of 15000+600000
+ 16821 strings out of 475551
+ 294494 string characters out of 5762555
+ 1979238 words of memory out of 5000000
+ 37752 multiletter control sequences out of 15000+600000
  585989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,11n,148p,1703b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,11n,148p,1726b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 146461 bytes).
+Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 146770 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
