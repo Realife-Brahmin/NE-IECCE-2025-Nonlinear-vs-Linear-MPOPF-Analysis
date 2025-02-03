@@ -247,6 +247,10 @@ INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\ulem\ulem.sty
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\ulem\ulem.sty
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\ulem\ulem.sty
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy6.tfm
+INPUT .\custom_environments.tex
+INPUT .\custom_environments.tex
+INPUT custom_environments.tex
+INPUT custom_environments.tex
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\lipsum\lipsum.sty
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\lipsum\lipsum.sty
 INPUT C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex\latex\lipsum\lipsum.sty
