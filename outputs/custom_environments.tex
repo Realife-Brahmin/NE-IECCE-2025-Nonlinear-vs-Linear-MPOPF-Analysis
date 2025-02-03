@@ -20,3 +20,17 @@
     {\renewcommand\theequation{\theparentequation L \alph{equation}}%
         \align}
     {\endalign}
+
+% Standard alignNL environment for standalone equations
+\newenvironment{alignNL}
+    {\setcounter{counterNL}{\value{equation}}%
+        \setcounter{equation}{\thecounterNL}%
+        \renewcommand\theequation{\arabic{equation}NL}%
+        \align}
+    {\endalign\setcounter{counterNL}{\value{equation}}\setcounter{equation}{\thecounterNL}}
+
+% alignNLsub environment for equations inside subequations (adds a, b, c suffix)
+\newenvironment{alignNLsub}
+    {\renewcommand\theequation{\theparentequation NL \alph{equation}}%
+        \align}
+    {\endalign}

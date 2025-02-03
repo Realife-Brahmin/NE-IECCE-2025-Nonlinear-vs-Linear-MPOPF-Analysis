@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 02:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 02:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,7 +483,26 @@ Package: ulem 2019/11/18
 ) (custom_environments.tex
 \c@counterL=\count305
 \c@counterNL=\count306
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `eq:RealPowerBalanceNodej' multiply defined.
+
+
+LaTeX Warning: Label `eq:RealPowerBalanceNodej@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:ReactivePowerBalanceNodej' multiply defined.
+
+
+LaTeX Warning: Label `eq:ReactivePowerBalanceNodej@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:KVL-branch-ij' multiply defined.
+
+
+LaTeX Warning: Label `eq:KVL-branch-ij@cref' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -565,15 +584,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 
 ]) (../sections/simulation/simulation.tex
-<../figures/T5-inputCurves/InputCurves_Horizon_5.png, id=91, 421.575pt x 316.0608pt>
+<../figures/T5-inputCurves/InputCurves_Horizon_5.png, id=89, 421.575pt x 316.0608pt>
 File: ../figures/T5-inputCurves/InputCurves_Horizon_5.png Graphic file (type png)
 <use ../figures/T5-inputCurves/InputCurves_Horizon_5.png>
 Package pdftex.def Info: ../figures/T5-inputCurves/InputCurves_Horizon_5.png  used on input line 51.
 (pdftex.def)             Requested size: 224.08981pt x 168.0pt.
 ) (../sections/results/results.tex
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
 Overfull \hbox (1.70226pt too wide) in paragraph at lines 358--378
  [][] 
  []
@@ -600,21 +616,25 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F6CDA1111CEEEDFFBD7683094DF6F6DF;993.
  ) 
 Here is how much of TeX's memory you used:
- 17002 strings out of 475551
- 298040 string characters out of 5762555
+ 17005 strings out of 475551
+ 298113 string characters out of 5762555
  1968238 words of memory out of 5000000
- 37872 multiletter control sequences out of 15000+600000
+ 37874 multiletter control sequences out of 15000+600000
  595212 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,14n,131p,1733b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 283294 bytes).
+Output written on main.pdf (3 pages, 282984 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  70 words of extra memory for PDF output out of 10000 (max. 10000000)
 

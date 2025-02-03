@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 02:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 02:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -493,7 +493,26 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count307
 \l__lipsum_a_int=\count308
 \l__lipsum_b_int=\count309
- (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux)
+ (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux
+
+LaTeX Warning: Label `eq:RealPowerBalanceNodej' multiply defined.
+
+
+LaTeX Warning: Label `eq:RealPowerBalanceNodej@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:ReactivePowerBalanceNodej' multiply defined.
+
+
+LaTeX Warning: Label `eq:ReactivePowerBalanceNodej@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:KVL-branch-ij' multiply defined.
+
+
+LaTeX Warning: Label `eq:KVL-branch-ij@cref' multiply defined.
+
+)
 \openout1 = `theory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -555,6 +574,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: Citation `Nazir2021Sep' on page 1 undefined on input line 52.
 
+[1
+
+{C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -566,9 +588,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1
+[2
 
-{C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux)
+] (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -577,21 +599,24 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: 61727F2309B0976A86246A5F11185051;411.
  ) 
 Here is how much of TeX's memory you used:
- 16820 strings out of 475551
- 294428 string characters out of 5762555
- 1976238 words of memory out of 5000000
- 37753 multiletter control sequences out of 15000+600000
+ 16824 strings out of 475551
+ 294507 string characters out of 5762555
+ 1978238 words of memory out of 5000000
+ 37755 multiletter control sequences out of 15000+600000
  585989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,11n,148p,1703b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,11n,148p,1703b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (1 page, 146298 bytes).
+Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 146461 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

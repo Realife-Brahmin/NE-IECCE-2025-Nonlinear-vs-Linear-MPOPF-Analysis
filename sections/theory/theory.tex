@@ -91,20 +91,26 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 %     \label{eq:RealPowerBalanceNodej} &&
 % \end{align}
 
-\begin{align}
+\begin{alignNL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
     - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= p_j^t
     \label{eq:RealPowerBalanceNodej}
-\end{align}
+\end{alignNL}
 
 \vspace{-1.5em} % Adjust the space as needed
+
+\begin{alignL}
+    {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
+    - \left(P_{ij}^t\right)} &= p_j^t
+    \label{eq:RealPowerBalanceNodej}
+\end{alignL}
 
 % \text{where}
 \begin{align}
     p_j^t &= \left(P_{d_j}^t - P_{c_j}^t\right) + p^t_{D_j} - p^t_{L_j} \label{eq:RealPowerBalanceNodej_pj}
 \end{align}
 
-\vspace{-2.0em} % Adjust the space as needed
+\vspace{-1.5em} % Adjust the space as needed
 
 % \begin{align}
 %     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
@@ -112,14 +118,21 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 %     \label{eq:ReactivePowerBalanceNodej}
 % \end{align}
 
-\begin{align}
+\begin{alignNL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
     - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= q_j^t
     \label{eq:ReactivePowerBalanceNodej} 
-\end{align}
+\end{alignNL}
+
+\vspace{-1.0em} % Adjust the space as needed
+
+\begin{alignNL}
+    {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
+    - \left(Q_{ij}^t\right)} &= q_j^t
+    \label{eq:ReactivePowerBalanceNodej} 
+\end{alignNL}
 
 \vspace{-1.5em} % Adjust the space as needed
-
 % \text{where}
 \begin{align}
     q_j^t &= q_{D_j}^t + q_{B_j}^t - q^t_{L_j} \label{eq:ReactivePowerBalanceNodej_qj}
@@ -127,17 +140,24 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \vspace{-1.5em} % Adjust the space as needed
 
-\begin{align}
+\begin{alignNL}
     {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t}  
     \label{eq:KVL-branch-ij}
-\end{align}
+\end{alignNL}
 
 \vspace{-1.5em} % Adjust the space as needed
 
-\begin{align}
+\begin{alignL}
+    {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) }  
+    \label{eq:KVL-branch-ij}
+\end{alignL}
+
+\vspace{-1.5em} % Adjust the space as needed
+
+\begin{alignNL}
     {(P_{ij}^{t})^2 + (Q_{ij}^{t})^2} &= {l_{ij}^t v_i^t} 
     \label{eq:ApparentPowerEquationBFM}
-\end{align}
+\end{alignNL}
 
 \vspace{-2.0em} % Adjust the space as needed
 
@@ -188,18 +208,12 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \vspace{-1.5em} % Adjust the space as needed
 
-\begin{align}
+\begin{alignNL}
     {(P_{B_j}^t)^2 + (q_{B_j}^t)^2} &\leq {S_{B_{R, j}}^2}
     \label{eq:battery-inverter-reactive-power-1ph-NL}
-\end{align}
+\end{alignNL}
 
 \vspace{-1.5em}
-
-% Standalone alignL example
-\begin{alignL}
-    e &= f \label{equ:4} \\
-    a &= g  \label{equ:5}.
-\end{alignL}
 
 % Subequations example using alignLsub
 \begin{subequations}
