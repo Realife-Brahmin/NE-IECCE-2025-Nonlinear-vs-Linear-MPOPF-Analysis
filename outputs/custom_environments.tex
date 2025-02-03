@@ -11,14 +11,12 @@
 \newenvironment{alignL}
     {\setcounter{counterL}{\value{equation}}%
         \setcounter{equation}{\thecounterL}%
-        \renewcommand\theequation{\arabic{equation}-L}%
+        \renewcommand\theequation{\arabic{equation}L}%
         \align}
     {\endalign\setcounter{counterL}{\value{equation}}\setcounter{equation}{\thecounterL}}
 
 % alignLsub environment for equations inside subequations (adds a, b, c suffix)
 \newenvironment{alignLsub}
-    {\setcounter{counterL}{\value{equation}}%
-        \setcounter{equation}{\thecounterL}% 
-        \renewcommand\theequation{\arabic{equation}-L-\alph{equation}}%
+    {\renewcommand\theequation{\theparentequation L \alph{equation}}%
         \align}
-    {\endalign\setcounter{equation}{\value{counterL}}}  % Restore equation counter
+    {\endalign}
