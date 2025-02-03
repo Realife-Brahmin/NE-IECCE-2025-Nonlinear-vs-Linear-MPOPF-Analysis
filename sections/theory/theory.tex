@@ -193,6 +193,24 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
     \label{eq:battery-inverter-reactive-power-1ph-NL}
 \end{align}
 
+\vspace{-1.5em}
+
+% Standalone alignL example
+\begin{alignL}
+    e &= f \label{equ:4} \\
+    a &= g  \label{equ:5}.
+\end{alignL}
+
+% Subequations example using alignLsub
+\begin{subequations}
+    \begin{alignLsub}
+        q_{B_j}^t &\in \left[-\sqrt{3} (P_{B_j}^t + S_{B_{R, j}}), -\sqrt{3} (P_{B_j}^t - S_{B_{R, j}})\right] \label{eq:batreact-L-a} \\
+        q_{B_j}^t &\in \left[-\frac{\sqrt{3}}{2} S_{B_{R, j}}, \frac{\sqrt{3}}{2} S_{B_{R, j}}\right] \label{eq:batreact-L-b} \\
+        q_{B_j}^t &\in \left[\sqrt{3} (P_{B_j}^t - S_{B_{R, j}}), \sqrt{3} (P_{B_j}^t + S_{B_{R, j}})\right] \label{eq:batreact-L-c}
+    \end{alignLsub}
+\end{subequations}
+
+\vspace{-1.5em} % Adjust the space as needed
 
 \begin{align}
 { P_{B_j}^t } &= { P_{d_j}^t - P_{c_j}^t } \label{eq:battery-power-output-definition}
