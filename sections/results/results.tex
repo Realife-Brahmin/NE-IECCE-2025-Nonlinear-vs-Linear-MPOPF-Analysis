@@ -23,30 +23,32 @@
 % \subsubsection{Optimality of Objective Function and Control Variables}
 % The second section of the \Cref{table:opt-5-20-30} i.e. `Simulation results' showcases that MPDOPF provides almost zero optimality gap (same values for Substation Power Cost, the objective function). Interestingly, there is a significant difference in the suggested optimal reactive power control values for inverters associated with DERs and batteries (results aggregated over all components over the horizon for conciseness). This highlights the fact that a nonconvex nonlinear optimization problem may not necessarily have a unique global optimal point. There is a possibility of having multiple feasible solutions with the same objective function value. 
 
-\begin{table}[t] % MPCOPF vs MPDOPF for T = 5
+\begin{table}[t] % BFM-NL vs LinDistFlow for 24 h 
     \centering
     \caption{Comparative analyses between BFM-NL and LinDistFlow - IEEE123 System for $24$ time-period horizon}
     \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}
+    } \\ \hline
     Largest subproblem & \multicolumn{2}{c|}{} \\ \hline
-    \quad Decision variables & {3150} & {1320} \\ \hline
-    \quad Linear constraints & {5831} & {2451} \\ \hline
-    \quad Nonlinear constraints & {635} & {265} \\ \hline
+    \quad Decision variables & {0000} & {12096} \\ \hline
+    \quad Linear constraints & {0000} & {22200} \\ \hline
+    \quad Nonlinear constraints & {0000} & {0} \\ \hline
     Simulation results  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Substation power cost (\$) & 576.31 & 576.30 \\ \hline
-    \quad Substation real power (kW) & 4308.28 & 4308.14 \\ \hline
-    \quad Line loss (kW) & 75.99 & 76.12 \\ \hline
-    \quad Substation reactive power (kVAR) & 574.18 & 656.24 \\ \hline
-    \quad PV reactive power (kVAR) & 116.92 & 160.64 \\ \hline
-    \quad Battery reactive power (kVAR) & 202.73 & 76.01 \\ \hline
+    \quad Substation power cost (\$) & 0000 & 2798.4 \\ \hline
+    \quad Substation real power (kW) & 0000 & 21065.89 \\ \hline
+    \quad Line loss (kW) & 0000 & 461.38 \\ \hline
+    \quad Substation reactive power (kVAR) & 0000 & 12259.29 \\ \hline
+    \quad PV reactive power (kVAR) & 0000 & 195.12 \\ \hline
+    \quad Battery reactive power (kVAR) & 0000 & 204.63 \\ \hline
     Computation  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Number of Iterations & - & 5 \\ \hline
-    \quad Total Simulation Time (s) & 521.25 & 49.87 \\ \hline
+    \quad Number of Iterations & 0000 & 1 \\ \hline
+    \quad Total Simulation Time (s) & 0000 & 0.85 \\ \hline
     \end{tabular}
     \label{table:opt-5-20-30}
     \vspace{-3mm}
 \end{table}
+
 
 % \subsubsection{ACOPF Feasibility Analysis}
 % \Cref{table:feas-5-20-30} showcases the ACOPF feasibility of the control values suggested by the MPDOPF algorithm. The first section `Full horizon' describes the respective output variables for the entire horizon from MPDOPF and OpenDSS. The second section `Max. all-time discrepancy' stores the highest discrepancy between key state/output variables for all components across any time between MPDOPF and OpenDSS. In both sections, the discrepancies are small enough to warrant the feasibility of the obtained solution. 
@@ -381,22 +383,20 @@
 
 \begin{table}[t]
     \centering
-    \caption{ACOPF feasibility analyses - $10$ hour}
+    \caption{ACOPF feasibility analyses - $24$ hour}
     \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{Metric} & \textbf{MPDOPF} & \textbf{OpenDSS} \\ \hline
-    Full horizon  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Substation real power (kW) & 8544.04 & 8544.40 \\ \hline
-    \quad Line loss (kW) & 148.94 & 148.87 \\ \hline
-    \quad Substation reactive power (kVAR) & 1252.03 & 1243.36 \\ \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
     Max. all-time discrepancy & \multicolumn{2}{c|}{} \\ \hline
-    \quad Voltage (pu) & \multicolumn{2}{c|}{0.0002} \\ \hline
-    \quad Line loss (kW) & \multicolumn{2}{c|}{0.0132} \\ \hline
-    \quad Substation power (kW) & \multicolumn{2}{c|}{0.4002} \\ \hline
+    \quad Voltage (pu) & 0000 & 0.002056 \\ \hline
+    \quad Line loss (kW) & 0000 & 1.807435 \\ \hline
+    \quad Substation power (kW) & 0000 & 32.362217 \\ \hline
+    \quad Substation reactive power (kVAR) & 0000 & 64.402519 \\ \hline
     \end{tabular}
     \label{table:feas-copf-10-20-30}
     \vspace{-3mm}
 \end{table}
+
 
 % \begin{figure}[h!]
 %     \centering
