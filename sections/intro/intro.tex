@@ -97,7 +97,20 @@
 %     \item Detailed comparative analyses between traditional MPCOPF and the proposed MPDOPF are done using the IEEE 123 bus test system and the benefits of the proposed approach are demonstrated. ACOPF feasibility validation is also performed by implementing the derived controls into an OpenDSS model of the test system.
 % \end{enumerate}
 
-ffff
+Optimal power flow (OPF) techniques are utilized to efficiently manage controllable grid-edge resources to achieve various system-wide goals, including cost-effectiveness, reliability, and resilience \cite{EES-030}. OPF analysis is becoming increasingly important at the distribution level due to the rising integration of distributed energy resources (DERs), particularly photovoltaic (PV) systems and battery energy storage systems (BESS). BESS plays a crucial role in mitigating DER variability through controlled charging and discharging, ensuring a stable supply-demand balance \cite{tgangwar}. However, incorporating BESS into OPF significantly increases the complexity of distribution network (DN) optimization, shifting the problem from a single-period, time-independent framework to a multi-period, time-coupled approach \cite{Paul}.
+
+Conventional OPF methods rely on a central controller that collects grid-edge data, runs the OPF algorithm, and dispatches control signals to manage system resources. Therefore, those are named as centralized OPF (COPF), which are typically formulated as mixed-integer non-convex programming (MINCP) problems. A non-convex active-reactive OPF is formulated in \cite{Gabash} for scheduling the operation of BESS in DN. Safdarian et al. \cite{Safdarian} investigated the impact of demand response programs on residential customers by directly solving the the MINCP based OPF problem. Mohapatra et al. \cite{Mohapatra} combined the gradient method and metaheuristic optimization for solving the MINCP framework. Padilha-Feltrin et al. \cite{Padilha-Feltrin} and Liu et al. \cite{Liu} employed nondominated sorting genetic algorithm (NSGA-II) and improved grey wolf equilibrium optimizer for solving the MINCP based OPF problems, respectively. Previously, authors also solved the MINCP based OPF for determining the operation of batteries in DN \cite{Jha}.   
+
+For making the MINCP OPF models convex, Li et al. \cite{Li} proposed a linear power flow model by merging support vector regression (SVR) and ridge regression (RR) algorithms. Lei et al. \cite{Lei} proposed a privacy-preserving linear OPF model for multi-agent DN having privately owned grid resources.  Linear approximation of the non-convex power flow model with Taylor series expansion for reactive power optimization is suggested in \cite{spaul} and \cite{Yang}. Vaishya et al. \cite{Vaishya} designed a linear ACOPF model for DN using active and reactive power sensitivity factors.
+
+% Hasan et al. \cite{Hasan} proposed a semi-definite programming (SDP) relaxed branch flow model for solving DN OPF problem as convex programming. 
+Following research gaps are identified from the above literature survey:
+\begin{enumerate}
+    \item Direct solution of MINCP framework, \cite{Gabas, Safdarian, Jha} may provide the global optimal solution but the solution time is more and mostly efficient for small and medium sized DNs. They are improper for bulk DNs.
+    \item Metaheuristic optimizations, \cite{Mohapatra, Padilha-Feltrin, Liu}, may stuck at the local optimum solution and suffer from slow convergence for multi-variate problems.
+    \item Linear programming frameworks, \cite{Li, Lei, spaul, Yang, Vaishya} are fast converging. However, they possess an optimality gap in the derived solutions. Further, the impact of the network size on the optimality gap is 
+\end{enumerate}
+  
 
 
 
