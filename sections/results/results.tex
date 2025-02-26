@@ -23,9 +23,47 @@
 % \subsubsection{Optimality of Objective Function and Control Variables}
 % The second section of the \Cref{table:opt-5-20-30} i.e. `Simulation results' showcases that MPDOPF provides almost zero optimality gap (same values for Substation Power Cost, the objective function). Interestingly, there is a significant difference in the suggested optimal reactive power control values for inverters associated with DERs and batteries (results aggregated over all components over the horizon for conciseness). This highlights the fact that a nonconvex nonlinear optimization problem may not necessarily have a unique global optimal point. There is a possibility of having multiple feasible solutions with the same objective function value. 
 
+\begin{table}[t]
+    \centering
+    \caption{MPOPF performance comparison - ADS10 test system for $24$h}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
+    Full horizon  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Substation power cost (\$) & 0000 & 204.28 \\ \hline
+    \quad Substation real power (kW) & 0000 & 1528.4 \\ \hline
+    \quad Line loss (kW) & 0000 & 0.33 \\ \hline
+    \quad Substation reactive power (kVAR) & 0000 & 795.56 \\ \hline
+    \quad PV reactive power (kVAR) & 0000 & -0.69 \\ \hline
+    \quad Battery reactive power (kVAR) & 0000 & -0.37 \\ \hline
+    Computation  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Number of Iterations & 0000 & 1 \\ \hline
+    \quad Total Simulation Time (s) & 0000 & 0.77 \\ \hline
+    \end{tabular}
+    \label{table:mpopf-perf-ads10}
+    \vspace{-3mm}
+\end{table}
+
+\begin{table}[t]
+    \centering
+    \caption{MPOPF feasibility comparison - ADS10 test system for $24$h}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
+    Max. all-time discrepancy & \multicolumn{2}{c|}{} \\ \hline
+    \quad Voltage (pu) & 0000 & 0.00001 \\ \hline
+    \quad Line loss (kW) & 0000 & 0.000006 \\ \hline
+    \quad Substation power (kW) & 0000 & 0.02410 \\ \hline
+    \quad Substation reactive power (kVAR) & 0000 & 0.05618 \\ \hline
+    \end{tabular}
+    \label{table:mpopf-feas-ads10}
+    \vspace{-3mm}
+\end{table}
+
+
 \begin{table}[t] % BFM-NL vs LinDistFlow for 24 h 
     \centering
-    \caption{Comparative analyses between BFM-NL and LinDistFlow - IEEE123 System for $24$ time-period horizon}
+    \caption{MPOPF performance comparison - IEEE123-A test system for $24$h}
     \begin{tabular}{|l|c|c|}
     \hline
     \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}} \\ \hline
@@ -47,27 +85,24 @@
     \vspace{-3mm}
 \end{table}
 
-% \subsubsection{ACOPF Feasibility Analysis}
-% \Cref{table:feas-5-20-30} showcases the ACOPF feasibility of the control values suggested by the MPDOPF algorithm. The first section `Full horizon' describes the respective output variables for the entire horizon from MPDOPF and OpenDSS. The second section `Max. all-time discrepancy' stores the highest discrepancy between key state/output variables for all components across any time between MPDOPF and OpenDSS. In both sections, the discrepancies are small enough to warrant the feasibility of the obtained solution. 
-
-\begin{table}[H]
+\begin{table}[t]
     \centering
-    \caption{ACOPF feasibility analyses - $5$ hour}
+    \caption{MPOPF feasibility comparison - IEEE123-A for $24$h}
     \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{Metric} & \textbf{MPDOPF} & \textbf{OpenDSS} \\ \hline
-    Full horizon  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Substation real power (kW) & 4308.14 & 4308.35 \\ \hline
-    \quad Line loss (kW) & 76.12 & 76.09 \\ \hline
-    \quad Substation reactive power (kVAR) & 656.24 & 652.49 \\ \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
     Max. all-time discrepancy & \multicolumn{2}{c|}{} \\ \hline
-    \quad Voltage (pu) & \multicolumn{2}{c|}{0.0002} \\ \hline
-    \quad Line loss (kW) & \multicolumn{2}{c|}{0.0139} \\ \hline
-    \quad Substation power (kW) & \multicolumn{2}{c|}{0.3431} \\ \hline
+    \quad Voltage (pu) & 0.00007 & 0.00206 \\ \hline
+    \quad Line loss (kW) & 0.01818 & 1.8074 \\ \hline
+    \quad Substation power (kW) & 0.43164 & 32.362 \\ \hline
+    \quad Substation reactive power (kVAR) & 1.0102 & 64.403 \\ \hline
     \end{tabular}
-    \label{table:feas-5-20-30}
+    \label{table:feas-copf-10-20-30}
     \vspace{-3mm}
 \end{table}
+
+% \subsubsection{ACOPF Feasibility Analysis}
+% \Cref{table:feas-5-20-30} showcases the ACOPF feasibility of the control values suggested by the MPDOPF algorithm. The first section `Full horizon' describes the respective output variables for the entire horizon from MPDOPF and OpenDSS. The second section `Max. all-time discrepancy' stores the highest discrepancy between key state/output variables for all components across any time between MPDOPF and OpenDSS. In both sections, the discrepancies are small enough to warrant the feasibility of the obtained solution. 
 
 % To ensure that the complementarity of charging and discharging of batteries is being respected, given our avoidance of the usage of integer constraints, the charging/discharging profiles for batteries were checked. and indeed that is the case. \Cref{fig:batt-plot-dopf-5-20-30-genCost} is shown as one example.
 
@@ -350,52 +385,7 @@
 %     % \vspace{-4mm}
 % \end{figure}
 
-
-\begin{table}[H]
-    \centering
-    \caption{Comparison between Nonlinear BFM and LinDistFlow - $10$ hour}
-    \begin{tabular}{|l|c|c|}
-    \hline
-    \textbf{Metric} & \textbf{Nonlinear BFM} & \textbf{LinDistFlow} \\ \hline
-    Largest subproblem & \multicolumn{2}{c|}{} \\ \hline
-    \quad Decision variables & {6300} & {2640} \\ \hline
-    \quad Linear constraints & {11636} & {4891} \\ \hline
-    \quad Nonlinear constraints & {1270} & {530} \\ \hline
-    Simulation results  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Substation power cost (\$) & 1197.87 & 1197.87 \\ \hline
-    \quad Substation real power (kW) & 8544.28 & 8544.04 \\ \hline
-    \quad Line loss (kW) & 148.67 & 148.94 \\ \hline
-    \quad Substation reactive power (kVAR) & 1092.39 & 1252.03 \\ \hline
-    \quad PV reactive power (kVAR) & 222.59 & 139.81 \\ \hline
-    \quad Battery reactive power (kVAR) & 388.52 & 310.94 \\ \hline
-    Computation  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Number of Iterations & - & 5 \\ \hline
-    \quad Total Simulation Time (s) & 4620.73 & 358.69 \\ \hline
-    \end{tabular}
-    \label{table:opt-10-20-30}
-    % \vspace{-1mm}
-\end{table}
-
 % Again, as can be seen in \Cref{table:feas-copf-10-20-30} comparison against OpenDSS has yielded small discrepancies, attesting to the feasibility of the solution. 
-
-\begin{table}[t]
-    \centering
-    \caption{ACOPF feasibility analyses - $24$ hour}
-    \begin{tabular}{|l|c|c|}
-    \hline
-    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow} \\ \hline
-    Max. all-time discrepancy & \multicolumn{2}{c|}{} \\ \hline
-    \quad Voltage (pu) & 0.00007 & 0.00206 \\ \hline
-    \quad Line loss (kW) & 0.01818 & 1.8074 \\ \hline
-    \quad Substation power (kW) & 0.43164 & 32.362 \\ \hline
-    \quad Substation reactive power (kVAR) & 1.0102 & 64.403 \\ \hline
-    \end{tabular}
-    \label{table:feas-copf-10-20-30}
-    \vspace{-3mm}
-\end{table}
-
-
-
 
 % \begin{figure}[h!]
 %     \centering
