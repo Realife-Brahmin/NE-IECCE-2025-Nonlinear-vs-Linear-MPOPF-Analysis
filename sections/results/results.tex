@@ -28,27 +28,24 @@
     \caption{Comparative analyses between BFM-NL and LinDistFlow - IEEE123 System for $24$ time-period horizon}
     \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}
-    } \\ \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}} \\ \hline
     Largest subproblem & \multicolumn{2}{c|}{} \\ \hline
-    \quad Decision variables & {0000} & {12096} \\ \hline
-    \quad Linear constraints & {0000} & {22200} \\ \hline
-    \quad Nonlinear constraints & {0000} & {0} \\ \hline
+    \quad Decision variables & {15144} & {12096} \\ \hline
+    \quad Linear constraints & {18456} & {22200} \\ \hline
+    \quad Nonlinear constraints & {3672} & {0} \\ \hline
     Simulation results  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Substation power cost (\$) & 0000 & 2798.4 \\ \hline
-    \quad Substation real power (kW) & 0000 & 21065.89 \\ \hline
-    \quad Line loss (kW) & 0000 & 461.38 \\ \hline
-    \quad Substation reactive power (kVAR) & 0000 & 12259.29 \\ \hline
-    \quad PV reactive power (kVAR) & 0000 & 195.12 \\ \hline
-    \quad Battery reactive power (kVAR) & 0000 & 204.63 \\ \hline
+    \quad Substation power cost (\$) & 2787.44 & 2798.4 \\ \hline
+    \quad Substation real power (kW) & 20984.89 & 21065.89 \\ \hline
+    \quad Line loss (kW) & 380.09 & 461.38 \\ \hline
+    \quad Substation reactive power (kVAR) & 6835.82 & 12259.29 \\ \hline
+    \quad PV reactive power (kVAR) & 1972.27 & 195.12 \\ \hline
+    \quad Battery reactive power (kVAR) & 3709.71 & 204.63 \\ \hline
     Computation  & \multicolumn{2}{c|}{} \\ \hline
-    \quad Number of Iterations & 0000 & 1 \\ \hline
-    \quad Total Simulation Time (s) & 0000 & 0.85 \\ \hline
+    \quad Total Simulation Time (s) & 17.44 & 0.85 \\ \hline
     \end{tabular}
     \label{table:opt-5-20-30}
     \vspace{-3mm}
 \end{table}
-
 
 % \subsubsection{ACOPF Feasibility Analysis}
 % \Cref{table:feas-5-20-30} showcases the ACOPF feasibility of the control values suggested by the MPDOPF algorithm. The first section `Full horizon' describes the respective output variables for the entire horizon from MPDOPF and OpenDSS. The second section `Max. all-time discrepancy' stores the highest discrepancy between key state/output variables for all components across any time between MPDOPF and OpenDSS. In both sections, the discrepancies are small enough to warrant the feasibility of the obtained solution. 
