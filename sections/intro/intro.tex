@@ -106,11 +106,16 @@ For making the MINCP OPF models convex, Li et al. \cite{Li} proposed a linear po
 % Hasan et al. \cite{Hasan} proposed a semi-definite programming (SDP) relaxed branch flow model for solving DN OPF problem as convex programming. 
 Following research gaps are identified from the above literature survey:
 \begin{enumerate}
-    \item Direct solution of MINCP framework, \cite{Gabas, Safdarian, Jha} may provide the global optimal solution but the solution time is more and mostly efficient for small and medium sized DNs. They are improper for bulk DNs.
+    \item Direct solution of MINCP framework, \cite{Gabas, Safdarian, Jha} may provide the global optimal solution but the solution time is more and mostly efficient for small and medium-sized DNs. They possess slow convergence and sometimes fail to converge for bulk DNs.
     \item Metaheuristic optimizations, \cite{Mohapatra, Padilha-Feltrin, Liu}, may stuck at the local optimum solution and suffer from slow convergence for multi-variate problems.
-    \item Linear programming frameworks, \cite{Li, Lei, spaul, Yang, Vaishya} are fast converging. However, they possess an optimality gap in the derived solutions. Further, the impact of the network size on the optimality gap is 
+    \item Linear programming frameworks, \cite{Li, Lei, spaul, Yang, Vaishya}, are fast converging. However, they possess an optimality gap in the derived solutions and the impact of the size of the network on the optimality gap is not investigated in the existing research works.
 \end{enumerate}
-  
+To overcome the above mentioned research gaps, this article aims to investigate the impact of the size of the network on the value of the optimality gap between the solutions obtained from non-linear and linear multi-period OPF models for DNs. The overall study has the following distinguished features:
+\begin{enumerate}
+    \item At first, the multi-period OPF problem is formulated for DNs consisting of battery-associated solar power generation as both non-linear and linear optimization problems. The non-linear problem is formulated by considering the original non-convex branch flow model of DNs \cite{Farivar1}. In contrast, the linear framework is developed by considering the LinDistFlow model of DN \cite{Gan}. Further, the quadratic inequality constraints are linearized by employing the hexagonal approximation technique. 
+    \item The investigation is carried out for distribution networks with different sizes like small (10-bus), medium (IEEE 123-bus), and large (730-bus) with different penetration levels of DERs and batteries. 
+    \item The ACOPF feasibility of the derived solutions is validated by feeding the determined control outputs in OpenDSS platform. 
+\end{enumerate}
 
 
 
