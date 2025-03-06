@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex main"] 1741298382 "main.aux" "main.bbl" "main" 1741298386 0
+["bibtex main"] 1741298863 "main.aux" "main.bbl" "main" 1741298866 0
   "./bibFile.bib" 1741298370 21700 b3cd127b437d4b9e17cc8b40d51fd99c ""
   "C:/Users/Aryan Ritwajeet Jha/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440618969 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1741298385 8099 7fa2651f1bec84e8d9b9b6f147836aba "pdflatex"
+  "main.aux" 1741298865 8467 a7c1615e19c3b3a3a90af0a745c97b9c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1741298382 "c:/Users/Aryan Ritwajeet Jha/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741298386 0
+["pdflatex"] 1741298863 "c:/Users/Aryan Ritwajeet Jha/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741298866 0
   "../figures/T24-inputCurves/Horizon_24_InputForecastCurves_bilevelCosts.png" 1740597582 547099 b4ffd02fe0011c0815cc856b4bbddb7d ""
   "../sections/conclusion/conclusion.tex" 1740601927 2771 858a57efb7615809e36fd4b758a0c127 ""
   "../sections/intro/intro.tex" 1741298370 15408 ef5088b8be4a4904e4d00b1750e39098 ""
-  "../sections/results/results.tex" 1740602173 24641 2f48ae9670451fc4023e7070dcf49227 ""
+  "../sections/results/results.tex" 1741298836 25811 5e39f37c3d3653cf1b659b320e7a3d94 ""
   "../sections/simulation/simulation.tex" 1740602602 4098 6ff04d6bc3df882590db5d470b327054 ""
   "../sections/theory/theory.tex" 1740601927 16547 ef71cf54e331071ad8f148f0c2c0d935 ""
   "C:/Users/Aryan Ritwajeet Jha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1728512741 83609 ebbc432e6cbbb238d39535255db2c8bd ""
@@ -156,13 +156,13 @@
   "C:/Users/Aryan Ritwajeet Jha/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/Aryan Ritwajeet Jha/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585217660 8510 7803f78066c4f9d008405191a4b43073 ""
   "IEEEtran.cls" 1740601927 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/Aryan Ritwajeet Jha/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741298376 5403 ded7725e2ac9f89342c6ef50ea461f39 ""
+  "c:/Users/Aryan Ritwajeet Jha/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741298858 5403 ded7725e2ac9f89342c6ef50ea461f39 ""
   "custom_environments.tex" 1740601927 1267 ac37720b60b9defbfebefa60d6168892 ""
-  "main.aux" 1741298385 8099 7fa2651f1bec84e8d9b9b6f147836aba "pdflatex"
-  "main.bbl" 1741298382 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
-  "main.out" 1741298385 1139 a11800b63dbaa181ac852999e6d110d1 "pdflatex"
-  "main.sta" 1741298384 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
-  "main.tex" 1741298376 5403 ded7725e2ac9f89342c6ef50ea461f39 ""
+  "main.aux" 1741298865 8467 a7c1615e19c3b3a3a90af0a745c97b9c "pdflatex"
+  "main.bbl" 1741298863 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
+  "main.out" 1741298865 1139 a897e3c20d7c946d88773dedb94a7d30 "pdflatex"
+  "main.sta" 1741298864 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
+  "main.tex" 1741298858 5403 ded7725e2ac9f89342c6ef50ea461f39 ""
   (generated)
   "main.aux"
   "main.log"

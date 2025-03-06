@@ -101,6 +101,30 @@
     \vspace{-3mm}
 \end{table}
 
+\begin{table}[t] % BFM-NL vs LinDistFlow for 24 h 
+    \centering
+    \caption{MPOPF performance comparison - IEEE730 test system for $24$h}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}} \\ \hline
+    Largest subproblem & \multicolumn{2}{c|}{} \\ \hline
+    \quad Decision variables & {00000} & {67224} \\ \hline
+    \quad Linear constraints & {00000} & {131616} \\ \hline
+    \quad Nonlinear constraints & {0000} & {0} \\ \hline
+    Simulation results  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Substation power cost (\$) & 0000 & 1515.98 \\ \hline
+    \quad Substation real power (kW) & 0000 & 12136.85 \\ \hline
+    \quad Line loss (kW) & 0000 & 139.07 \\ \hline
+    \quad Substation reactive power (kVAR) & 0000 & 4586.75 \\ \hline
+    \quad PV reactive power (kVAR) & 0000 & -18.69 \\ \hline
+    \quad Battery reactive power (kVAR) & 0000 & -14.33 \\ \hline
+    Computation  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Total Simulation Time (s) & 0000 & 7.67 \\ \hline
+    \end{tabular}
+    \label{table:opt-ieee730-24h}
+    \vspace{-3mm}
+\end{table}
+
 % \subsubsection{ACOPF Feasibility Analysis}
 % \Cref{table:feas-5-20-30} showcases the ACOPF feasibility of the control values suggested by the MPDOPF algorithm. The first section `Full horizon' describes the respective output variables for the entire horizon from MPDOPF and OpenDSS. The second section `Max. all-time discrepancy' stores the highest discrepancy between key state/output variables for all components across any time between MPDOPF and OpenDSS. In both sections, the discrepancies are small enough to warrant the feasibility of the obtained solution. 
 
