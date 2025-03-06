@@ -99,6 +99,17 @@ S.~R. Vaishya, A.~R. Abhyankar, and P.~Kumar, ``A novel loss sensitivity based
   linearized opf and lmp calculations for active balanced distribution
   networks,'' \emph{IEEE Syst. J.}, vol.~17, no.~1, pp. 1340--1351, 2023.
 
+\bibitem{Farivar1}
+M.~Farivar and S.~H. Low, ``Branch flow model: Relaxations and
+  convexification—part i,'' \emph{IEEE Transactions on Power Systems},
+  vol.~28, no.~3, pp. 2554--2564, 2013.
+
+\bibitem{Gan}
+L.~Gan and S.~H. Low, ``{Convex relaxations and linear approximation for
+  optimal power flow in multiphase radial networks},'' in \emph{{2014 Power
+  Systems Computation Conference}}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Poland: IEEE, pp. 18--22.
+
 \bibitem{Nazir2021Sep}
 N.~Nazir and M.~Almassalkhi, ``{Guaranteeing a Physically Realizable Battery
   Dispatch Without Charge-Discharge Complementarity Constraints},'' \emph{IEEE

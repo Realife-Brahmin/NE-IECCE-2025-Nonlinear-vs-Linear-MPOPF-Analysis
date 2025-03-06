@@ -14,47 +14,48 @@ Warning--I didn't find a database entry for "Gabas"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty year in Gan
 
 Done.
-You've used 16 entries,
+You've used 18 entries,
             4087 wiz_defined-function locations,
-            931 strings with 10471 characters,
-and the built_in function-call counts, 15307 in all, are:
-= -- 1299
-> -- 340
-< -- 174
-+ -- 208
-- -- 49
-* -- 771
-:= -- 2232
-add.period$ -- 32
-call.type$ -- 16
-change.case$ -- 16
-chr.to.int$ -- 384
-cite$ -- 16
-duplicate$ -- 1042
-empty$ -- 1069
-format.name$ -- 65
-if$ -- 3595
+            946 strings with 10819 characters,
+and the built_in function-call counts, 17044 in all, are:
+= -- 1445
+> -- 373
+< -- 193
++ -- 228
+- -- 53
+* -- 853
+:= -- 2483
+add.period$ -- 37
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 429
+cite$ -- 19
+duplicate$ -- 1163
+empty$ -- 1206
+format.name$ -- 71
+if$ -- 4006
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 161
-newline$ -- 73
-num.names$ -- 16
-pop$ -- 294
+int.to.str$ -- 18
+missing$ -- 177
+newline$ -- 79
+num.names$ -- 18
+pop$ -- 329
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1194
+skip$ -- 1333
 stack$ -- 0
-substring$ -- 912
-swap$ -- 980
-text.length$ -- 46
+substring$ -- 1019
+swap$ -- 1085
+text.length$ -- 50
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 16
-warning$ -- 0
-while$ -- 66
-width$ -- 18
-write$ -- 199
-(There was 1 warning)
+type$ -- 18
+warning$ -- 1
+while$ -- 75
+width$ -- 20
+write$ -- 219
+(There were 2 warnings)
