@@ -46,7 +46,7 @@
 % Include custom environments
 \input{custom_environments.tex}
 
-\title{Investigating Optimality Gap between Linear and Nonlinear Multi-Period OPF Models for Active Distribution Networks}
+\title{Analyzing the Optimality Gap between Linear and Nonlinear Multi-Period OPF Models across Different Sizes of Active Distribution Networks}
 
 % Comparative Analysis of Linear vs. Nonlinear Multi-Period OPF Models for Active Distribution Systems
 
@@ -85,6 +85,11 @@ Varanasi, UP, India\\
 
 
 \begin{abstract}
+The development of the multi-period optimal power flow framework is gaining interest nowadays because of the large penetration of battery associated distributed energy resources (DERs) into electricity distribution networks (EDNs). Typically, the OPF problem is modeled as a non-convex programming (NCP) framework by employing the non-convex branch power flow model of EDNs. However, the slow convergence and large computation time of the NCP motivate researchers to explore the possibility of developing the linear programming (LP) based OPF portfolio at the expense of the optimality gap in the derived solutions. To the best of the authors' knowledge, no state-of-the-art research has investigated the impact of EDN size on the optimality gap. In this context, this article aims to develop multi-period OPF models for EDNs and analyze their NCP- and LP-based solution processes across different EDN sizes, specifically 10-bus (small), IEEE-123 bus (medium), and 730-bus (large) test systems. The optimality gaps in the ACOPF solution and decision variables for each network are assessed by simulating the control decisions in the OpenDSS platform. The simulation results indicate that while the optimality gap due to LP increases with network size, it consistently delivers near-optimal solutions with fast convergence.
+
+
+% To the authors' knowledge, no state-of-the-art research has explored the impact of EDNs' size on the value of the optimality gap. In this regard, this article aims to develop multi-period OPF models for EDNs and simulate its NCP and LP based solution process for different sizes of EDNs viz. 10-bus (small), IEEE-123 bus (medium), and 730-bus (large) test systems. The optimality gaps in the ACOPF solution and decision variables for each network are validated by simulating the control decisions in the OpenDSS platform. The simulation outcome shows that the optimality gap due to LP amplifies with the increasing size of the network but provides near-optimal solutions in each case with fast convergence.  
+
 
 % The growing presence of battery-based distributed energy resources (DERs) in power distribution systems necessitates the development of multi-period optimal power flow (MPOPF) algorithms. Generally, an MPOPF problem is formulated as a mixed integer non-convex programming (MINCP) problem and solved in centralized manner. The centralized solutions for MPOPF problem, termed as MPCOPF, suffer from scalability challenges. A typical solution time for a medium-sized ($\sim$100 bus system) is in the order of \(10^3\) to \(10^4\) seconds; such solution time-scales are too slow for operational decision-making. This paper introduces a spatially distributed algorithm to solve MPOPF problems, termed MPDOPF, designed to address these shortcomings. Our method breaks down the centralized MPOPF problem into smaller sub-problems, which are solved in parallel. We achieve network-level optimality using the Equivalent Network Approximation (ENApp) algorithm, where neighboring agents iteratively exchange boundary voltage and power flow variables until convergence. We analyze the performance of the proposed MPDOPF algorithm using the IEEE 123 bus test system, providing insights into the advantages of distributed MPOPF frameworks in terms of solution time compared to centralized approaches.
 
