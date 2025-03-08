@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  3 FEB 2025 03:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  7 MAR 2025 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -12,7 +12,7 @@ Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
 Preamble taken from file `../../outputs/main.tex'
 (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
-) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\outputs\main.tex (IEEEtran.cls
+) (../../outputs/main.tex (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -367,7 +367,7 @@ Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 \c@currfiledepth=\count296
 )
 \sa@out=\write3
- (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.sta) (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/gincltex\gincltex.sty (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/svn-prov\svn-prov.sty
+ (theory.sta) (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/gincltex\gincltex.sty (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/svn-prov\svn-prov.sty
 Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
 Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
@@ -483,7 +483,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 \ULC@box=\box63
 Package: ulem 2019/11/18
 \ULdepth=\dimen259
-) (custom_environments.tex
+) (../../outputs/custom_environments.tex
 \c@counterL=\count305
 \c@counterNL=\count306
 ))) (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
@@ -493,7 +493,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count307
 \l__lipsum_a_int=\count308
 \l__lipsum_b_int=\count309
- (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux
+ (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (theory.aux
 
 LaTeX Warning: Label `eq:RealPowerBalanceNodej' multiply defined.
 
@@ -536,7 +536,7 @@ LaTeX Font Info:    ... okay on input line 42.
 
 -- Lines per column: 56 (exact).
 Package hyperref Info: Link coloring OFF on input line 42.
-(c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.out) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.out)
+(theory.out) (theory.out)
 \@outlinefile=\write4
 \openout4 = `theory.out'.
 
@@ -558,7 +558,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.sta)
+)) (theory.sta)
 \openout3 = `theory.sta'.
 
 Package caption Info: Begin \AtBeginDocument code.
@@ -613,7 +613,7 @@ Before submitting the final camera ready copy, remember to:
 
 [2
 
-] (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux)
+] (theory.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -625,21 +625,27 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `theory.out' has not changed.
-(rerunfilecheck)             Checksum: 61727F2309B0976A86246A5F11185051;411.
+
+Package rerunfilecheck Warning: File `theory.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `theory.out':
+(rerunfilecheck)             Before: 61727F2309B0976A86246A5F11185051;411
+(rerunfilecheck)             After:  834540C23EF6CA06D5E52D604F5E543D;675.
  ) 
 Here is how much of TeX's memory you used:
- 16818 strings out of 475551
- 294450 string characters out of 5762555
+ 16821 strings out of 475551
+ 293705 string characters out of 5762555
  1979238 words of memory out of 5000000
- 37753 multiletter control sequences out of 15000+600000
+ 37754 multiletter control sequences out of 15000+600000
  585989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,11n,148p,1730b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 146428 bytes).
+Output written on theory.pdf (2 pages, 146881 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
