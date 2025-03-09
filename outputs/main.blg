@@ -14,47 +14,48 @@ Database file #1: bibFile.bib
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty year in Gan
+Warning--empty year in Farivar
 
 Done.
-You've used 18 entries,
+You've used 19 entries,
             4087 wiz_defined-function locations,
-            944 strings with 10809 characters,
-and the built_in function-call counts, 17044 in all, are:
-= -- 1445
-> -- 373
-< -- 193
-+ -- 228
-- -- 53
-* -- 853
-:= -- 2483
-add.period$ -- 37
-call.type$ -- 18
-change.case$ -- 18
-chr.to.int$ -- 429
-cite$ -- 19
-duplicate$ -- 1163
-empty$ -- 1206
-format.name$ -- 71
-if$ -- 4006
+            951 strings with 11055 characters,
+and the built_in function-call counts, 17855 in all, are:
+= -- 1508
+> -- 392
+< -- 200
++ -- 238
+- -- 56
+* -- 891
+:= -- 2599
+add.period$ -- 40
+call.type$ -- 19
+change.case$ -- 19
+chr.to.int$ -- 447
+cite$ -- 21
+duplicate$ -- 1220
+empty$ -- 1278
+format.name$ -- 75
+if$ -- 4197
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 177
-newline$ -- 79
-num.names$ -- 18
-pop$ -- 329
+int.to.str$ -- 19
+missing$ -- 185
+newline$ -- 82
+num.names$ -- 19
+pop$ -- 353
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1333
+skip$ -- 1397
 stack$ -- 0
-substring$ -- 1019
-swap$ -- 1085
-text.length$ -- 50
+substring$ -- 1062
+swap$ -- 1129
+text.length$ -- 51
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 18
-warning$ -- 1
-while$ -- 75
-width$ -- 20
-write$ -- 219
-(There was 1 warning)
+type$ -- 19
+warning$ -- 2
+while$ -- 80
+width$ -- 21
+write$ -- 228
+(There were 2 warnings)
