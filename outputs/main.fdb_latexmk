@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex main"] 1741372977 "main.aux" "main.bbl" "main" 1741372981 0
+["bibtex main"] 1741509707 "main.aux" "main.bbl" "main" 1741509712 0
   "./bibFile.bib" 1741372783 21700 b3cd127b437d4b9e17cc8b40d51fd99c ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440618969 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1741372980 8979 240e9f1f008c28c413b7770fa502c9b3 "pdflatex"
+  "main.aux" 1741509710 9372 66fbbe7275dbe2bd93f1a224ff06a41b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1741372978 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741372981 0
+["pdflatex"] 1741509708 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741509712 0
   "../figures/T24-inputCurves/Horizon_24_InputForecastCurves_bilevelCosts.png" 1741372783 547099 b4ffd02fe0011c0815cc856b4bbddb7d ""
   "../sections/conclusion/conclusion.tex" 1741372783 2771 858a57efb7615809e36fd4b758a0c127 ""
   "../sections/intro/intro.tex" 1741372783 15409 8a917f351f2d47091e4e0619e891a4e7 ""
-  "../sections/results/results.tex" 1741372783 26433 8f5342a61a8d00d9437a3bd4f2cd1a6f ""
+  "../sections/results/results.tex" 1741509638 27608 c9539c0e86f9450b90d5c7367374d8ea ""
   "../sections/simulation/simulation.tex" 1741372783 4098 6ff04d6bc3df882590db5d470b327054 ""
   "../sections/theory/theory.tex" 1741372783 16547 ef71cf54e331071ad8f148f0c2c0d935 ""
   "C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737988506 230760 38a57079c0fd7fa3dc57d3c2d6aa9e21 ""
@@ -156,13 +156,13 @@
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585217660 8510 7803f78066c4f9d008405191a4b43073 ""
   "IEEEtran.cls" 1737987967 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741372973 7467 ad759a48dd9b0d50f45794912d4de8a7 ""
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741509703 7459 2a7b6672d378ee406dc6f689ddf7d946 ""
   "custom_environments.tex" 1738582734 1267 ac37720b60b9defbfebefa60d6168892 ""
-  "main.aux" 1741372980 8979 240e9f1f008c28c413b7770fa502c9b3 "pdflatex"
-  "main.bbl" 1741372978 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
-  "main.out" 1741372980 1139 c936c951f358bcf200e4312b3af46a54 "pdflatex"
-  "main.sta" 1741372980 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
-  "main.tex" 1741372973 7467 ad759a48dd9b0d50f45794912d4de8a7 ""
+  "main.aux" 1741509710 9372 66fbbe7275dbe2bd93f1a224ff06a41b "pdflatex"
+  "main.bbl" 1741509707 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
+  "main.out" 1741509710 1140 ff59f99b075ce08a7801b72ccc3ae9ff "pdflatex"
+  "main.sta" 1741509710 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
+  "main.tex" 1741509703 7459 2a7b6672d378ee406dc6f689ddf7d946 ""
   (generated)
   "main.aux"
   "main.log"

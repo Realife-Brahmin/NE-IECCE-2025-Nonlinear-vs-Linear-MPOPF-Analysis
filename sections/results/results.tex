@@ -97,7 +97,31 @@
     \quad Substation power (kW) & 0.43164 & 32.362 \\ \hline
     \quad Substation reactive power (kVAR) & 1.0102 & 64.403 \\ \hline
     \end{tabular}
-    \label{table:feas-copf-10-20-30}
+    \label{table:feas-ieee123A-24h}
+    \vspace{-3mm}
+\end{table}
+
+\begin{table}[t] % BFM-NL vs LinDistFlow for 24 h 
+    \centering
+    \caption{MPOPF performance comparison - IEEE123-B test system for $24$h}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Metric} & \textbf{BFM-NL} & \textbf{LinDistFlow\textsuperscript{\(\mathbb{O}\)}} \\ \hline
+    Largest subproblem & \multicolumn{2}{c|}{} \\ \hline
+    \quad Decision variables & {17184} & {0000} \\ \hline
+    \quad Linear constraints & {24168} & {0000} \\ \hline
+    \quad Nonlinear constraints & {4080} & {0000} \\ \hline
+    Simulation results  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Substation power cost (\$) & 1973.83 & 0000 \\ \hline
+    \quad Substation real power (kW) & 16594.11 & 0000 \\ \hline
+    \quad Line loss (kW) & 234.78 & 0000 \\ \hline
+    \quad Substation reactive power (kVAR) & -404.91 & 0000 \\ \hline
+    \quad PV reactive power (kVAR) & 7255.22 & 0000 \\ \hline
+    \quad Battery reactive power (kVAR) & 5371.97 & 0000 \\ \hline
+    Computation  & \multicolumn{2}{c|}{} \\ \hline
+    \quad Total Simulation Time (s) & 23.75 & 0000 \\ \hline
+    \end{tabular}
+    \label{table:opt-ieee123B-24h}
     \vspace{-3mm}
 \end{table}
 
