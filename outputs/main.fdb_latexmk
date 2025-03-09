@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1741510405 "main.aux" "main.bbl" "main" 1741518372 0
+["bibtex main"] 1741518912 "main.aux" "main.bbl" "main" 1741519284 0
   "./bibFile.bib" 1741376383 21700 b3cd127b437d4b9e17cc8b40d51fd99c ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1741518371 9754 60153218d4ef58cf996acce30df1a58d "pdflatex"
+  "main.aux" 1741519283 9754 f819f6b588ae99b179e1eaae7f5b6d4c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1741518369 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741518372 0
+["pdflatex"] 1741519280 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" "main.pdf" "main" 1741519284 0
   "../figures/T24-inputCurves/Horizon_24_InputForecastCurves_bilevelCosts.png" 1741376383 547099 b4ffd02fe0011c0815cc856b4bbddb7d ""
   "../sections/conclusion/conclusion.tex" 1741376383 2771 858a57efb7615809e36fd4b758a0c127 ""
   "../sections/intro/intro.tex" 1741376383 15409 8a917f351f2d47091e4e0619e891a4e7 ""
@@ -156,13 +156,13 @@
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "IEEEtran.cls" 1737991567 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741518368 7459 2a7b6672d378ee406dc6f689ddf7d946 ""
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/outputs/main.tex" 1741519278 6649 d9a47a6f8c3ae78742cca1a0d65bc8f0 ""
   "custom_environments.tex" 1738586334 1267 ac37720b60b9defbfebefa60d6168892 ""
-  "main.aux" 1741518371 9754 60153218d4ef58cf996acce30df1a58d "pdflatex"
-  "main.bbl" 1741514006 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
-  "main.out" 1741518371 1140 eca710dc70973267076e14ccc1713566 "pdflatex"
-  "main.sta" 1741518371 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
-  "main.tex" 1741518368 7459 2a7b6672d378ee406dc6f689ddf7d946 ""
+  "main.aux" 1741519283 9754 f819f6b588ae99b179e1eaae7f5b6d4c "pdflatex"
+  "main.bbl" 1741518913 5443 9c4ecb6bddda4998eb910a3f3d19be02 "bibtex main"
+  "main.out" 1741519283 1140 eca710dc70973267076e14ccc1713566 "pdflatex"
+  "main.sta" 1741519283 510 483e70781e4bbb980f1e4406fab19da8 "pdflatex"
+  "main.tex" 1741519278 6649 d9a47a6f8c3ae78742cca1a0d65bc8f0 ""
   (generated)
   "main.aux"
   "main.log"
