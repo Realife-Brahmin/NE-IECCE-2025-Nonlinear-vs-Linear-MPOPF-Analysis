@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  9 MAR 2025 04:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.3)  9 MAR 2025 06:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -493,49 +493,30 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count307
 \l__lipsum_a_int=\count308
 \l__lipsum_b_int=\count309
- (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux
-
-LaTeX Warning: Label `eq:RealPowerBalanceNodej' multiply defined.
-
-
-LaTeX Warning: Label `eq:RealPowerBalanceNodej@cref' multiply defined.
-
-
-LaTeX Warning: Label `eq:ReactivePowerBalanceNodej' multiply defined.
-
-
-LaTeX Warning: Label `eq:ReactivePowerBalanceNodej@cref' multiply defined.
-
-
-LaTeX Warning: Label `eq:KVL-branch-ij' multiply defined.
-
-
-LaTeX Warning: Label `eq:KVL-branch-ij@cref' multiply defined.
-
-)
+ (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.aux)
 \openout1 = `theory.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 -- Lines per column: 56 (exact).
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 53.
 (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.out) (c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.out)
 \@outlinefile=\write4
 \openout4 = `theory.out'.
@@ -563,25 +544,25 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
  (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (C:\Users\aryan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Citation `Farivar1' on page 1 undefined on input line 54.
+LaTeX Warning: Citation `Farivar1' on page 1 undefined on input line 65.
 
 
-LaTeX Warning: Citation `Farivar' on page 1 undefined on input line 54.
+LaTeX Warning: Citation `Farivar' on page 1 undefined on input line 65.
 
 
-LaTeX Warning: Citation `Nazir2021Sep' on page 1 undefined on input line 55.
+LaTeX Warning: Citation `Nazir2021Sep' on page 1 undefined on input line 67.
 
 
-LaTeX Warning: Citation `Ahmadi2014Oct' on page 1 undefined on input line 261.
+LaTeX Warning: Citation `Ahmadi2014Oct' on page 1 undefined on input line 276.
 
 [1
 
@@ -589,22 +570,22 @@ LaTeX Warning: Citation `Ahmadi2014Oct' on page 1 undefined on input line 261.
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.262 
+l.277 
       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.262 
+l.277 
       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.262 
+l.277 
       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.262 
+l.277 
       ]
 
 ** Conference Paper **
@@ -628,24 +609,21 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `theory.out' has not changed.
 (rerunfilecheck)             Checksum: 5969196FA80D3BA4BACD9D2C95031B58;627.
  ) 
 Here is how much of TeX's memory you used:
- 16822 strings out of 475551
- 294499 string characters out of 5762555
+ 16829 strings out of 475551
+ 294722 string characters out of 5762555
  1979238 words of memory out of 5000000
- 37756 multiletter control sequences out of 15000+600000
+ 37763 multiletter control sequences out of 15000+600000
  585989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,11n,148p,1702b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 148418 bytes).
+Output written on c:/Users\aryan\Documents\documents_general\NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis\sections\theory\theory.pdf (2 pages, 147967 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

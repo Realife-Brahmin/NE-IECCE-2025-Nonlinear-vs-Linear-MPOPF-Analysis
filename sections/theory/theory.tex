@@ -15,6 +15,17 @@
 % For single equation references
 % \newcommand{\crefLsub}[1]{\cref{#1}-L} % Custom reference command for "L" equations
 
+% Define \creflist to format references as "(4), (5) and (7)"
+% Define \creflist to format references as "(4), (5) and (7)"
+\newcommand{\creflist}[1]{%
+    \begingroup
+    \renewcommand{\creflastconjunction}{ and~}  % Ensures "and" appears only before the last item
+    \renewcommand{\crefmiddleconjunction}{, }  % Uses commas between earlier references
+    \cref{#1}%
+    \endgroup
+}
+
+
 \crefformat{equation}{(#2#1#3)}
 \Crefformat{equation}{(#2#1#3)}
 % For multiple equation references
@@ -51,8 +62,10 @@ The apparent power flow through line {\(ij\)} at time \(t\) is \(S_{ij}^t\) (\(=
 % Rated apparent powers of DERs and Batteries at node $j$ are denoted by $S_{D_{R_j}}$ and $S_{B_{R_j}}$ respectively.
 
 \subsection{MPOPF Model Descriptions}
-In this section, a head to head comparison of the constraints used for both the nonlinear and linear models is provided for the Multi-Period Optimal Power Flow (MPOPF) problem. For the nonlinear formulation, the branch flow model (BFM-NL) \cite{Farivar1} is used, while for the linear formulation, the LinDistFlow variation of the Branch Flow Model \cite{Farivar} is used. It may be seen that barring a few constraints, most of the constraints are common between the two models as described by \crefrange{eq:genCost_withSCD}{eq:modelEndsHere-and-lim_Bj}.
-The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_withSCD}. The first term in \cref{eq:genCost_withSCD} aims to minimize the total energy cost for the entire horizon. Including the `Battery Loss' cost as the second term ($\alpha > 0$) helps eliminate the need for binary (integer) variables typically used to prevent simultaneous charging and discharging. The resulting OPF problem is a non-convex optimization problem \cite{Nazir2021Sep}.
+In this section, a head to head comparison of the constraints used for both the nonlinear and linear models is provided for the Multi-Period Optimal Power Flow (MPOPF) problem. For the nonlinear formulation, the branch flow model (BFM-NL) \cite{Farivar1} is used, while for the linear formulation, the LinDistFlow variation of the Branch Flow Model \cite{Farivar} is used. It may be seen that barring a few constraints, most of the constraints are common between the two models as described by \crefrange{eq:genCost_withSCD}{eq:modelEndsHere-and-lim_Bj}. The uncommon constraints are suffixed with an `-NL' for the nonlinear model and an `-L' for the linear model.
+
+\cref{eq:genCost_withSCD} describes the objective function of the MPOPF problem. Specifically, for the problem of minimizing the cost of the power borrowed from the substation $f_0$. The inclusion of a secondary `Battery Loss' function $f_{SCD}$ penalizes the simultaneous charging and discharging of batteries, while avoiding the need of binary variables \cite{Nazir2021Sep}. 
+% The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_withSCD}. The first term in \cref{eq:genCost_withSCD} aims to minimize the total energy cost for the entire horizon. Including the `Battery Loss' cost as the second term ($\alpha > 0$) helps eliminate the need for binary (integer) variables typically used to prevent simultaneous charging and discharging. The resulting OPF problem is a non-convex optimization problem \cite{Nazir2021Sep}.
 
 % \begin{equation}
 %     \min {\sum_{t = 1}^{T} \left[ C^t P^t_{Subs} + \alpha \sum_{j \in \mathcal{B}} \left\{ (1-\eta_C)P^t_{C_j} + \left( \frac{1}{\eta_D} - 1 \right) P^t_{D_j}\right\} \right] } \label{eq:genCost_withSCD}
@@ -85,7 +98,7 @@ The OPF problem aims to minimize two objectives as shown in \cref{eq:genCost_wit
 \end{align}
 % \end{equation}
 
-Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere-and-lim_Bj} as given below:
+Subject to the constraints \crefrange{eq:RealPowerBalanceNodej-NL}{eq:modelEndsHere-and-lim_Bj} as given below:
 
 % \begin{align}
 %     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
@@ -97,7 +110,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{alignNL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
     - \left(P_{ij}^t - r_{ij}l_{ij}^t\right)} &= p_j^t
-    \label{eq:RealPowerBalanceNodej}
+    \label{eq:RealPowerBalanceNodej-NL}
 \end{alignNL}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -107,7 +120,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{alignL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{P_{jk}^t\right\} 
     - \left(P_{ij}^t\right)} &= p_j^t
-    \label{eq:RealPowerBalanceNodej}
+    \label{eq:RealPowerBalanceNodej-L}
 \end{alignL}
 
 \vspace{-1.0em} % Adjust the space as needed
@@ -128,7 +141,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{alignNL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
     - \left(Q_{ij}^t - x_{ij}l_{ij}^t\right)} &= q_j^t
-    \label{eq:ReactivePowerBalanceNodej} 
+    \label{eq:ReactivePowerBalanceNodej-NL} 
 \end{alignNL}
 
 \vspace{-1.0em} % Adjust the space as needed
@@ -138,7 +151,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \begin{alignL}
     {\sum_{(j, k) \in \mathcal{L}} \left\{Q_{jk}^t\right\}  
     - \left(Q_{ij}^t\right)} &= q_j^t
-    \label{eq:ReactivePowerBalanceNodej} 
+    \label{eq:ReactivePowerBalanceNodej-L} 
 \end{alignL}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -151,7 +164,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \begin{alignNL}
     {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) + \left\{r_{ij}^2 + x_{ij}^2\right\}l_{ij}^t}  
-    \label{eq:KVL-branch-ij}
+    \label{eq:KVL-branch-ij-NL}
 \end{alignNL}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -160,7 +173,7 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 
 \begin{alignL}
     {v_j^t} &= {v_{i}^t - 2(r_{ij}P_{ij}^t + x_{ij}Q_{ij}^t) }  
-    \label{eq:KVL-branch-ij}
+    \label{eq:KVL-branch-ij-L}
 \end{alignL}
 
 \vspace{-1.5em} % Adjust the space as needed
@@ -206,12 +219,12 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
 \vspace{-1.5em} % Adjust the space as needed
 
 % \begin{align}
-%     {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t \left( \eta_c P_{c_j}^t - \frac{1}{\eta_d} P_{d_j}^t \right)  }, \quad B_{j}^{0}=B_{j}^{T}  \label{eq:SOC-j}
+%     {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t \left( \eta_c P_{c_j}^t - \frac{1}{\eta_d} P_{d_j}^t \right)  }, \quad B_{j}^{0}=B_{j}^{T}  \label{eq:SOC-Trajectory-j}
 % \end{align} // currently terminal soc constraint has been retired
 
 \begin{align}
     {B_{j}^{t}} &= {B_{j}^{t-1} + \Delta t \left( \eta_c P_{c_j}^t - \frac{1}{\eta_d} P_{d_j}^t \right)  }
-    \label{eq:SOC-j}
+    \label{eq:SOC-Trajectory-j}
 \end{align}
 \vspace{-2.0em} % Adjust the space as needed
 
@@ -254,9 +267,11 @@ Subject to the constraints \crefrange{eq:RealPowerBalanceNodej}{eq:modelEndsHere
     { B^{t}_{j} } &\in { \left[ soc_{min}B_{R, j}, soc_{max}B_{R, j} \right] } \label{eq:modelEndsHere-and-lim_Bj}
 \end{align}
 
-A branch power flow model, given by \crefrange{eq:RealPowerBalanceNodej}{eq:ApparentPowerEquationBFM}, is used to represent power flow in distribution system.   Constraints \cref{eq:RealPowerBalanceNodej,eq:ReactivePowerBalanceNodej} model the active and reactive power balance at node $j$, respectively.
+The network power flow constraints, notably, the nodal real and reactive power balance equations and the KVL constraint across a branch, a re similar across the two models, with the only difference being whether a term representing losses is included (\ref{eq:RealPowerBalanceNodej-NL}, \ref{eq:ReactivePowerBalanceNodej-NL},\ref{eq:KVL-branch-ij-NL}) or not (\ref{eq:RealPowerBalanceNodej-L},\ref{eq:ReactivePowerBalanceNodej-L},\ref{eq:KVL-branch-ij-L}) not.
 
-The KVL equation for branch $(ij)$ is represented by \cref{eq:KVL-branch-ij}, while the equation describing the relationship between current magnitude, voltage magnitude and apparent power magnitude for branch $(ij)$ is given by \cref{eq:ApparentPowerEquationBFM}. Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:pv-inverter-reactive-power-limits-1ph,eq:pv-inverter-reactive-power-maximum-1ph} describe the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. 
+% The network powerflow constraints, notably, the nodal real and reactive power balance equations and the KVL constraint across a branch are similar across the two models, with the only difference being whether a term representing losses is included \cref{eq:RealPowerBalanceNodej-NL,eq:ReactivePowerBalanceNodej-NL,eq:KVL-branch-ij-NL} or \cref{eq:RealPowerBalanceNodej-L,eq:ReactivePowerBalanceNodej-L,eq:KVL-branch-ij-L} not.  
+
+Backflow of real power into the substation from the distribution system is avoided using the constraint \cref{eq:substationRealPowerLimits}. The allowable limits for bus voltages are modeled via \cref{eq:lim_vj}. \cref{eq:pv-inverter-reactive-power-limits-1ph,eq:pv-inverter-reactive-power-maximum-1ph} describe the reactive power limits of DER inverters. The trajectory of the battery energy versus time is given by \cref{eq:SOC-Trajectory-j} (this is a time-coupled constraint). Battery charging and discharging powers are limited by the battery's rated power capacity, as given by \cref{eq:lim_PcPdj}. 
 % \cref{eq:lim_PcPdj} also says that the initial and final energy levels for battery must be the same at the end of the optimization time horizon. 
 Reactive Power Output from Battery Inverters are is constrained by the quadratic inequality \cref{eq:battery-inverter-reactive-power-1ph-NL}. A linearized set of equations approximating the same are given by \crefLsub{eq:battery-inverter-reactive-power-1ph-L},  which utilize a hexagonal approximation of the inequality \cite{Ahmadi2014Oct}. For the safe and sustainable operation of the batteries, the energy $B^{t}_{j}$ is constrained to be within some percentage limits of the rated battery SOC capacity, modeled using \cref{eq:modelEndsHere-and-lim_Bj}
 
