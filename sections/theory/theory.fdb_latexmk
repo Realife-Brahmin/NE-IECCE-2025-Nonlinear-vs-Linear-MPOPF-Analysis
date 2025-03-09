@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741527054 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.tex" "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.pdf" "theory" 1741527055 0
+["pdflatex"] 1741527181 "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.tex" "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.pdf" "theory" 1741527182 0
   "C:/Users/aryan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737992106 230760 38a57079c0fd7fa3dc57d3c2d6aa9e21 ""
   "C:/Users/aryan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1691062465 24118870 26cc7d157b3eb261579171f69854db7a ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -124,13 +124,13 @@
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/aryan/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "IEEEtran.cls" 1737991567 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/../../outputs/main.tex" 1741526735 6657 4b27ef93b992d13408d10fa6d6bbfba9 ""
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.aux" 1741527055 4554 1295dc0ba7a86eded4220ecb422aef60 "pdflatex"
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.out" 1741527055 627 5969196fa80d3ba4bacd9d2c95031b58 "pdflatex"
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.sta" 1741527055 45 5977ee01d6365feae7164ffda30d2c8b "pdflatex"
-  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.tex" 1741527053 18582 cb38edb7377e13ca72964ec3b200f97f ""
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/../../outputs/main.tex" 1741527060 6657 4b27ef93b992d13408d10fa6d6bbfba9 ""
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.aux" 1741527182 4554 1295dc0ba7a86eded4220ecb422aef60 "pdflatex"
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.out" 1741527182 627 5969196fa80d3ba4bacd9d2c95031b58 "pdflatex"
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.sta" 1741527182 45 5977ee01d6365feae7164ffda30d2c8b "pdflatex"
+  "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.tex" 1741527180 18581 8697e886ec5a9b1e2ce3b16e0fd73b05 ""
   "custom_environments.tex" 1738586334 1267 ac37720b60b9defbfebefa60d6168892 ""
-  "main.tex" 1741526735 6657 4b27ef93b992d13408d10fa6d6bbfba9 ""
+  "main.tex" 1741527060 6657 4b27ef93b992d13408d10fa6d6bbfba9 ""
   (generated)
   "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.aux"
   "c:/Users/aryan/Documents/documents_general/NE-IECCE-2025-Nonlinear-vs-Linear-MPOPF-Analysis/sections/theory/theory.log"
